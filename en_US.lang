@@ -956,6 +956,9 @@ option.EMISSIVE_ORES.comment=Adds glow to all ores except coal and nether ores.
 option.EMISSIVE_IRON_ORE=Emissive Iron Ore
 option.EMISSIVE_IRON_ORE.comment=Adds glow to iron ores. §e[*]§r "Emissive Overworld Ores" must be enabled.
 
+option.EMISSIVE_COPPER_ORE=Emissive Copper Ore
+option.EMISSIVE_COPPER_ORE.comment=Adds glow to copper ores. §e[*]§r "Emissive Overworld Ores" must be enabled.
+
 option.ORE_EMISSION=Ore Emission Intensity
 option.ORE_EMISSION.comment=Adjusts the intensity of glow on all ores including nether ores and ancient debris.
 
@@ -991,6 +994,9 @@ option.GLOWING_LAPIS_BLOCK.comment=Adds a glow to the lapis lazuli block.
 
 option.GREEN_SCREEN=Green Screen Lime Blocks
 option.GREEN_SCREEN.comment=Changes lime concrete and lime wool to green screens. §e[*]§r Pro tip: Put light sources under lime carpets for lighting.
+
+option.BLUE_SCREEN=Blue Screen Blue Blocks
+option.BLUE_SCREEN.comment=Changes blue concrete and blue wool to blue screens. §e[*]§r Pro tip: Put light sources under blue carpets for lighting.
 
 option.HAND_BLOOM_REDUCTION=Handheld Bloom Reduction
 option.HAND_BLOOM_REDUCTION.comment=Reduces the amount of glow on items/blocks that are in player's hands.
