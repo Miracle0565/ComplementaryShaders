@@ -11,8 +11,8 @@ profile.EXTREME=§d极致
 profile.comment=§4很低：§r 关闭光影和水反。 §6低级：§r 降低阴影的分辨率和距离。 §e中等：§r 关闭镜面反射。  §a原版 / RTX-ish：§r 在原版的风格上有着不错的表现。 §b高级（默认设置）：§r 默认的光影效果。 §9特级:§r 开启一些额外的特效。 §d极致:§r 极致的光影效果。
 
 #Screens
-screen.ABOUT=Complementary Shaders by EminGT（简体中文翻译：MCBBS 隐居小树）
-screen.ABOUT.comment=Heavily based on "BSL Shaders". Thanks so much to Capt Tatsu for letting me publish Complementary, and also proposing the idea of me doing so.（译：这个光影很大程度上基于“BSL Shaders”。十分感谢 Capt Tatsu 让我发布了 Complementary 光影包，并让我有了这么做的想法。译者注：如有任何翻译或侵权问题，请联系我，谢谢~）
+screen.ABOUT=Complementary Shaders by EminGT
+screen.ABOUT.comment=Heavily based on "BSL Shaders". Thanks so much to Capt Tatsu for letting me publish Complementary, and also proposing the idea of me doing so.（译：这个光影很大程度上基于“BSL Shaders”。十分感谢 Capt Tatsu 让我发布了 Complementary 光影包，并让我有了这么做的想法。译注：简体中文由 MCBBS 隐居小树 翻译。如有任何翻译或侵权问题，请联系我，谢谢~）
 
 screen.WORLD=世界
 screen.WORLD.comment=应用于世界的效果。 
@@ -140,16 +140,16 @@ value.RP_SUPPORT.2=§a基本（禁用 PBR）
 value.RP_SUPPORT.3=§dlabPBR（需要资源包）
 value.RP_SUPPORT.4=§dSEUS PBR（需要资源包）
 
-option.AO_QUALITY=环境光遮蔽质量
-option.AO_QUALITY.comment=调整环境光遮蔽的质量。 §e[*]§r 如果TAA关闭，“低”会被切换为“中”。  
+option.AO_QUALITY=SSAO 质量
+option.AO_QUALITY.comment=调整屏幕空间环境光遮蔽（SSAO）的质量。 §e[*]§r 如果TAA关闭，“低”会被切换为“中”。  
 value.AO_QUALITY.1=低 (Half Res)
 value.AO_QUALITY.2=中 (4 Samples)
 value.AO_QUALITY.3=高 (12 Samples)
 
-option.AO=环境光遮蔽（SSAO）
-option.AO.comment=在表面接触或相交周围添加柔和阴影。还能提高反射精度（别问为啥）。
+option.AO=SSAO
+option.AO.comment=屏幕空间环境光遮蔽（SSAO）。在表面接触或相交的地方添加柔和的阴影，还能提高反射精度（别问为啥）。
 
-option.AO_STRENGTH=环境光遮蔽强度
+option.AO_STRENGTH=SSAO 强度
 option.AO_STRENGTH.comment=调整环境光遮蔽的强度。
 
 option.WATER_CAUSTICS=水下散焦线
@@ -204,12 +204,12 @@ option.LIGHT_SHAFT_THE_END_MULTIPLIER=末地光束系数
 option.LIGHT_SHAFT_THE_END_MULTIPLIER.comment=调整末路之地的光束强度。
 
 option.REFLECTION=水面/透明反射
-option.REFLECTION.comment=启用屏幕空间反射。 §e[*]§r 该选项只会影响水面或透明物体表面的反射，雨和高光反射不受影响。
+option.REFLECTION.comment=启用屏幕空间反射。 §e[*]§r 该选项只会影响水面或透明物体表面的反射，高光反射不受影响。
 
 option.REFLECTION_TRANSLUCENT=透明反射
 option.REFLECTION_TRANSLUCENT.comment=允许在透明物体（例如彩色玻璃）的表面上渲染反射效果。
 
-option.WATER_TRANSLUCENT_SKY_REF=水面/透明天空反射。
+option.WATER_TRANSLUCENT_SKY_REF=水面/透明天空反射
 option.WATER_TRANSLUCENT_SKY_REF.comment=允许水面和透明物体的表面渲染天空的反射。
 
 option.EMISSIVE_MULTIPLIER=自发光系数
@@ -284,7 +284,7 @@ option.WAVING_EVERYTHING.comment=让一切摇摆起来。
 option.EXTRA_PARTICLE_EMISSION=强制发光粒子
 option.EXTRA_PARTICLE_EMISSION.comment=强制让所有的“彩色粒子”发光。
 
-option.ANAMORPHIC_BLOOM=泛光变形
+option.ANAMORPHIC_BLOOM=泛光失真变形
 option.ANAMORPHIC_BLOOM.comment=改变泛光计算来达到模拟一些相机的效果。 §c[-]§r  对性能有影响。
 
 option.HAND_SWAY=手臂挥舞
@@ -307,7 +307,7 @@ option.DYNAMIC_SHADER_LIGHT.comment=为手持物品运行基于光影包的动�
 option.DYNAMIC_LIGHT_DISTANCE=手持光源光照距离
 option.DYNAMIC_LIGHT_DISTANCE.comment=决定从手持光源发出的光在消失前可以传播多远。
 
-option.RANDOM_BLOCKLIGHT=随机颜色光
+option.RANDOM_BLOCKLIGHT=随机彩色照明
 option.RANDOM_BLOCKLIGHT.comment=使用世界坐标为方块照明选择随机颜色。
 
 option.COLORED_LIGHT_DEFINE=场景感知彩色照明
@@ -477,7 +477,7 @@ option.FOV_SCALED_BLUR=基于 FOV 的模糊
 option.FOV_SCALED_BLUR.comment=取决于你的视场角（FOV）或缩放距离来调节模糊程度。如果你不想在放大视野的时候被闪晃眼，那就禁用此选项。
 
 option.CHROMATIC_BLUR=多彩模糊
-option.CHROMATIC_BLUR.comment=对模糊区域应用色差。 §e[*]§r 当启用此项时，建议禁用“色彩偏移”选项。
+option.CHROMATIC_BLUR.comment=对模糊区域应用色彩偏移效果。 §e[*]§r 当启用此项时，建议禁用“色彩偏移”选项。
 
 option.MOTION_BLUR=动态模糊
 option.MOTION_BLUR.comment=启用动态模糊。
@@ -495,11 +495,11 @@ value.BLOOM_STRENGTH.100=§bBSL
 option.NETHER_BLOOM_MULTIPLIER=下界泛光强度
 option.NETHER_BLOOM_MULTIPLIER.comment=调整下界维度的泛光强度。
 
-option.LENS_FLARE=镜头光晕
-option.LENS_FLARE.comment=启用镜头光晕。
+option.LENS_FLARE=镜头光斑
+option.LENS_FLARE.comment=启用镜头光斑。
 
-option.LENS_FLARE_STRENGTH=镜头光晕强度
-option.LENS_FLARE_STRENGTH.comment=调整镜头光晕强度。
+option.LENS_FLARE_STRENGTH=镜头光斑强度
+option.LENS_FLARE_STRENGTH.comment=调整镜头光斑强度。
 
 option.AA=抗锯齿
 option.AA.comment=启用抗锯齿。 FXAA：对锯齿边缘应用一些智能模糊。 LiteTAA：使用前一帧过滤下一帧。 IntenseTAA：良好的抗锯齿和过滤，但会导致更多的闪烁和伪影。 §a[+]§r 某些效果需要 TAA 才能保持平滑；除非不喜欢平滑的图像，否则不要禁用它。
@@ -549,7 +549,7 @@ option.TONEMAP_UPPER_CURVE.comment=调整较亮颜色的对比度。
 option.SATURATION=饱和度
 option.SATURATION.comment=调整所有颜色的饱和度。
 
-option.VIBRANCE=鲜艳度
+option.VIBRANCE=自然饱和度
 option.VIBRANCE.comment=调整较低饱和度颜色的饱和度，较高饱和度的颜色受影响较少。
 
 option.CG_RR=红色 - 红色值
@@ -927,7 +927,7 @@ option.WATER_SIZE.comment=调整自定义水体法线的基本噪波大小。
 option.WATER_SPEED=速度
 option.WATER_SPEED.comment=调整用于水法线的噪波速度
 
-option.UNDERWATER_DISTORT=水下变形
+option.UNDERWATER_DISTORT=水下扭曲
 option.UNDERWATER_DISTORT.comment=调整水下屏幕扭曲的强度。
 value.UNDERWATER_DISTORT.100.0=太大了
 value.UNDERWATER_DISTORT.1000.0=你要干啥？
@@ -955,6 +955,9 @@ option.EMISSIVE_ORES.comment=为除煤炭和下界矿石之外的所有矿石添
 
 option.EMISSIVE_IRON_ORE=铁矿石光晕
 option.EMISSIVE_IRON_ORE.comment=为铁矿石添加光晕。 §e[*]§r 必须启用“主世界矿石光晕”。
+
+option.EMISSIVE_COPPER_ORE=铜矿石光晕
+option.EMISSIVE_COPPER_ORE.comment=为铜矿石添加光晕。 §e[*]§r 必须启用“主世界矿石光晕”。
 
 option.ORE_EMISSION=矿石发光强度
 option.ORE_EMISSION.comment=调整所有矿石的发光强度，包括下界矿石和远古残骸。
@@ -991,6 +994,10 @@ option.GLOWING_LAPIS_BLOCK.comment=为青金石添加光晕。
 
 option.GREEN_SCREEN=Green Screen Lime Blocks
 option.GREEN_SCREEN.comment=Changes lime concrete and lime wool to green screens. §e[*]§r 高级提示：将光源放在黄绿色地毯下进行照明。
+
+option.BLUE_SCREEN=Blue Screen Blue Blocks
+option.BLUE_SCREEN.comment=Changes blue concrete and blue wool to blue screens. §e[*]§r 高级提示：将光源放在蓝色地毯下进行照明。
+
 
 option.HAND_BLOOM_REDUCTION=手持物泛光减少
 option.HAND_BLOOM_REDUCTION.comment=减少玩家手中物品/方块的发光量。 
