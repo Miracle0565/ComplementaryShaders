@@ -21,12 +21,12 @@ screen.WORLD_CURVATURE_CONFIG.comment=关于地平线弯曲程度的设置。
 
 screen.MATERIALS=材质
 screen.MATERIALS.comment=关于高级材质的设置。
-screen.COMPBR=综合 PBR 设置
-screen.COMPBR.comment=关于综合高级材质效果的设置。 §e[*]§r 仅当将“资源包支持”设为“综合PBR+”生效。
+screen.COMPBR=集成 PBR 设置
+screen.COMPBR.comment=关于集成高级材质效果的设置。 §e[*]§r 仅当将“资源包支持”设为“集成PBR+”生效。
 screen.COMPBRORES=自发光矿石
 screen.COMPBRORES.comment=设置矿石的发光
-screen.COMPBRMISC=更多综合 PBR 设置
-screen.COMPBRMISC.comment=设置综合 PBR 的其他方面。
+screen.COMPBRMISC=更多集成 PBR 设置
+screen.COMPBRMISC.comment=设置集成 PBR 的其他方面。
 screen.EMISSIVES=自发光设置
 screen.EMISSIVES.comment=设定物体的发光程度。
 screen.NORMALS=法线贴图相关设置
@@ -131,11 +131,11 @@ option.TEST=测试
 option.TEST.comment=开发者工具，可能不起效果。
 
 option.COMPATIBILITY_MODE=兼容模式
-option.COMPATIBILITY_MODE.comment=更改了许多东西使得光影包的兼容性更好，尤其是与许多模组，并强制禁用综合 PBR+。
+option.COMPATIBILITY_MODE.comment=更改了许多东西使得光影包的兼容性更好，尤其是与许多模组，并强制禁用集成 PBR+。
 
 option.RP_SUPPORT=资源包支持
-option.RP_SUPPORT.comment=决定如何处理资源包。 §b综合PBR+:§r 综合 PBR 以及额外的特效；仅当使用原版材质或与原版颜色相似材质时表现完美。 §a基本：§r 禁用 PBR，帧率较高。 §dPBR：§r 启用高光和法线贴图；需要 PBR 资源包。取决于你的 PBR 资源包支持何种来选择 labPBR 或 SEUSPBR。
-value.RP_SUPPORT.1=§b综合PBR+
+option.RP_SUPPORT.comment=决定如何处理资源包。 §b集成PBR+:§r 集成 PBR 以及额外的特效；仅当使用原版材质或与原版颜色相似材质时表现完美。 §a基本：§r 禁用 PBR，帧率较高。 §dPBR：§r 启用高光和法线贴图；需要 PBR 资源包。取决于你的 PBR 资源包支持何种来选择 labPBR 或 SEUSPBR。
+value.RP_SUPPORT.1=§b集成PBR+
 value.RP_SUPPORT.2=§a基本（禁用 PBR）
 value.RP_SUPPORT.3=§dlabPBR（需要资源包）
 value.RP_SUPPORT.4=§dSEUS PBR（需要资源包）
@@ -276,7 +276,7 @@ option.SHOW_RAY_TRACING=高亮光线追踪
 option.SHOW_RAY_TRACING.comment=高亮光线追踪像素。 但这不包括水，因为它总是通过光线追踪渲染。  
 
 option.METALLIC_WORLD=金属质感的世界
-option.METALLIC_WORLD.comment=让所有方块拥有金属质感。 §e[*]§r “资源包支持”必须设置为“综合PBR+”
+option.METALLIC_WORLD.comment=让所有方块拥有金属质感。 §e[*]§r “资源包支持”必须设置为“集成PBR+”
 
 option.WAVING_EVERYTHING=让一切摇摆
 option.WAVING_EVERYTHING.comment=让一切摇摆起来。
