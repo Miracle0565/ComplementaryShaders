@@ -104,6 +104,9 @@ screen.WAVING_CONFIG.comment=Settings about the waving in the wind effect.
 screen.LIGHT_SHAFT_CONFIG=Light Shaft Settings
 screen.LIGHT_SHAFT_CONFIG.comment=Settings about light shafts.
 
+screen.REFLECTION_CONFIG=Reflection Settings
+screen.REFLECTION_CONFIG.comment=Settings about reflections.
+
 screen.RAIN_REF_CONFIG=Rain Puddle Settings
 screen.RAIN_REF_CONFIG.comment=Settings about rain puddles.
 
@@ -293,7 +296,7 @@ option.HAND_SWAY.comment=Adds movement to player's hand in order to simulate bre
 option.SNOW_MODE=Snow Mode
 option.SNOW_MODE.comment=Adds snow on top of terrain. §c[-]§r Can look wrong in some situations. §e[*]§r PBR must be enabled.
 
-option.GLINT_BRIGHTNESS=Enchantment Glint Intensity
+option.GLINT_BRIGHTNESS=Enchantment Glint Brightness
 option.GLINT_BRIGHTNESS.comment=Adjusts the intensity of enchantment glint on enchanted items.
 
 option.NIGHT_VISION=Night Vision Style
@@ -348,7 +351,7 @@ option.NETHER_SMOKE.comment=Adds a smoke effect to the fog in The Nether. §e[*]
 option.RAIN_REF_BIOME_CHECK=Rain Puddle Biome Check
 option.RAIN_REF_BIOME_CHECK.comment=Disabling this makes rain puddles appear on all biomes including deserts.
 
-option.RAIN_REF_FORCED=Forces Rain Puddles
+option.RAIN_REF_FORCED=Force Rain Puddles
 option.RAIN_REF_FORCED.comment=Enabling this makes rain puddles appear even when it isn't raining.
 
 option.NEBULA_COMPRESSION=Nebula Compression
@@ -376,10 +379,11 @@ option.NEBULA_SPEED=Nebula Speed
 option.NEBULA_SPEED.comment=Adjusts the animation speed of the nebula.
 
 option.SHOW_LIGHT_LEVELS=Show Light Levels
-option.SHOW_LIGHT_LEVELS.comment=In Overworld: Yellow means mobs can spawn during night time, red means mobs can spawn anytime. In The Nether and The End: Yellow means some mobs can spawn, red means all mobs can spawn. "Hold Spider Eye" means you need to hold a Spider Eye in one of your hands for the feature to activate. §e[*]§r Disable Smooth Lighting for precise results.
+option.SHOW_LIGHT_LEVELS.comment=In Overworld: Yellow means mobs can spawn during night time, red means mobs can spawn anytime. In The Nether and The End: Yellow means some mobs can spawn, red means all mobs can spawn. §e[*]§r Disable Smooth Lighting for precise results.
 value.SHOW_LIGHT_LEVELS.0=OFF
 value.SHOW_LIGHT_LEVELS.1=Hold Spider Eye
 value.SHOW_LIGHT_LEVELS.2=Always ON
+value.SHOW_LIGHT_LEVELS.3=Hold Light Source
 
 option.WRONG_MIPMAP_FIX=Broken Mipmap Fix
 option.WRONG_MIPMAP_FIX.comment=Disables mipmap levels on all specular maps and the shadowmap.
@@ -391,7 +395,10 @@ option.REFLECTION_ROUGH=Reflection Roughness
 option.REFLECTION_ROUGH.comment=Allows surfaces with lower smoothness to render rougher reflections. §e[*]§r TAA is highly recommended with this effect. §c[-]§r Performance impact.
 
 option.SPECULAR_SKY_REF=Specular Sky Ref.
-option.SPECULAR_SKY_REF.comment=Allows non-translucent surfaces to render subtle sky reflections. §c[-]§r Performance impact.
+option.SPECULAR_SKY_REF.comment=Allows opaque surfaces to render subtle sky reflections and shine under sun/moon. §c[-]§r Small performance impact.
+
+option.DOUBLE_QUALITY_ROUGH_REF=Double Reflection Quality
+option.DOUBLE_QUALITY_ROUGH_REF.comment=Doubles the reflection samples especially to make rough surfaces look better. §e[*]§r "Reflection Roughness" must be enabled. §c[-]§r Performance impact.
 
 option.REFLECTION_RAIN=Rain Puddles
 option.REFLECTION_RAIN.comment=Enables water puddles that appear during rain. §e[*]§r PBR and Specular Reflections must be enabled for this to work. §c[-]§r Puddles can appear in incorrect spots. §c[-]§r May not work in Minecraft versions below 1.16.5.
@@ -409,10 +416,10 @@ option.NORMAL_MAPPING=Normal Mapping
 option.NORMAL_MAPPING.comment=Enables normal mapping support for labPBR and SME resource packs.
 
 option.PARALLAX=Parallax Occlusion Mapping
-option.PARALLAX.comment=Adds displacement on a surface using height map.
+option.PARALLAX.comment=Adds displacement on a surface using height map. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 
 option.PARALLAX_DEPTH=Parallax Depth
-option.PARALLAX_DEPTH.comment=Adjusts parallax deepness.
+option.PARALLAX_DEPTH.comment=Adjusts parallax deepness. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 value.PARALLAX_DEPTH.0.20=0.20 (5 cm)
 value.PARALLAX_DEPTH.0.40=0.40 (10 cm)
 value.PARALLAX_DEPTH.0.60=0.60 (15 cm)
@@ -425,22 +432,22 @@ value.PARALLAX_DEPTH.1.80=1.80 (45 cm)
 value.PARALLAX_DEPTH.2.00=2.00 (50 cm)
 
 option.SELF_SHADOW=Self Shadowing
-option.SELF_SHADOW.comment=Allows a surface to cast shadow to itself using heightmap.
+option.SELF_SHADOW.comment=Allows a surface to cast shadow to itself using heightmap. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 
 option.SELF_SHADOW_ANGLE=Self Shadowing Angle
-option.SELF_SHADOW_ANGLE.comment=Adjusts the self shadowing angle, higher value allows the shadow to travel further.
+option.SELF_SHADOW_ANGLE.comment=Adjusts the self shadowing angle, higher value allows the shadow to travel further. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 
 option.PARALLAX_QUALITY=Parallax Quality
-option.PARALLAX_QUALITY.comment=Adjusts the quality of parallax occlusion mapping and self shadows.
+option.PARALLAX_QUALITY.comment=Adjusts the quality of parallax occlusion mapping and self shadows. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 
 option.PARALLAX_DISTANCE=Parallax Distance
-option.PARALLAX_DISTANCE.comment=Adjusts how far parallax occlusion mapping and self shadows can be rendered.
+option.PARALLAX_DISTANCE.comment=Adjusts how far parallax occlusion mapping and self shadows can be rendered. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 
 option.DIRECTIONAL_LIGHTMAP=Directional Lightmap
-option.DIRECTIONAL_LIGHTMAP.comment=Adds normal mapping to vanilla lighting. §c[-]§r Can cause the lightmap to look glitchy.
+option.DIRECTIONAL_LIGHTMAP.comment=Adds normal mapping to vanilla lighting. §c[-]§r Can cause the lightmap to look glitchy. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 
 option.DIRECTIONAL_LIGHTMAP_STRENGTH=Directional Lightmap Strength
-option.DIRECTIONAL_LIGHTMAP_STRENGTH.comment=Adjusts the intensity of Directional Lightmap.
+option.DIRECTIONAL_LIGHTMAP_STRENGTH.comment=Adjusts the intensity of Directional Lightmap. §e[*]§r Only for labPBR or SEUS PBR resource packs.
 
 option.NORMAL_MULTIPLIER=Normal Multiplier
 option.NORMAL_MULTIPLIER.comment=Adjusts how intense normals are going to be. Lower values produce smoother and more flat normals.
@@ -606,10 +613,10 @@ value.shadowDistance.768.0=48 Chunks
 value.shadowDistance.1024.0=64 Chunks
 
 option.SHADOWS=Real-Time Shadows
-option.SHADOWS.comment=Enables shadows that are getting generated using a shadow map. §e[*]§r Disabling this might cause issues with some mods.
+option.SHADOWS.comment=Enables shadows that are getting generated using a shadow map. §e[*]§r Disabling this might cause issues with some mods. §c[-]§r Supermassive performance impact.
 
 option.SHADOW_FILTER=Shadow Filtering
-option.SHADOW_FILTER.comment=Enables shadow filtering. §a[+]§r This effect benefits from TAA.
+option.SHADOW_FILTER.comment=Enables shadow filtering. §a[+]§r This effect benefits from TAA. §c[-]§r Performance impact.
 
 option.sunPathRotation=Sun/Moon Path Rotation
 option.sunPathRotation.comment=Adjusts sun/moon angle.
@@ -633,10 +640,22 @@ option.CLOUD_SHADOW=Fake Cloud Shadows
 option.CLOUD_SHADOW.comment=Adds occasional big shadows on the terrain to simulate clouds casting shadows. §c[-]§r Not synced with the actual clouds
 
 option.NO_FOLIAGE_SHADOWS=No Foliage Shadows
-option.NO_FOLIAGE_SHADOWS.comment=Disables shadows cast by things like grass and flowers. §e[*]§r This setting does not affect frame rates.
+option.NO_FOLIAGE_SHADOWS.comment=Disables shadows cast by things like grass and flowers. §e[*]§r This setting does not affect performance.
 
 option.PIXEL_SHADOWS=Pixelated Shadows
-option.PIXEL_SHADOWS.comment=Floors the world coordinates on a 16x16 grid to make shadows pixelated. §e[*]§r This setting does not affect frame rates.
+option.PIXEL_SHADOWS.comment=Modifies the world coordinates on a grid to make shadows pixelated. §e[*]§r This setting does not affect performance.
+value.PIXEL_SHADOWS.0=OFF
+value.PIXEL_SHADOWS.8=8x8
+value.PIXEL_SHADOWS.16=16x16
+value.PIXEL_SHADOWS.32=32x32
+value.PIXEL_SHADOWS.64=64x64
+value.PIXEL_SHADOWS.128=128x128
+
+option.BLOCK_ENTITY_SHADOWS=Block Entity Shadows
+option.BLOCK_ENTITY_SHADOWS.comment=Enables shadows of block entities like chests, shulker boxes, signs. §c[-]§r Heavy performance impact in specific situations.
+
+option.ENTITY_SHADOWS=Entity Shadows
+option.ENTITY_SHADOWS.comment=Enables shadows of entities like animals, monsters, players. §c[-]§r Heavy performance impact in specific situations.
 
 option.SHADING_STRENGTH=Shading Strength
 option.SHADING_STRENGTH.comment=Changes the shading darkness on surfaces that are not facing up. Affects everywhere including caves.
@@ -758,10 +777,11 @@ option.AURORA_DOWN_B=Lower Section - Blue
 option.AURORA_DOWN_I=Lower Section - Intensity
 
 option.SELECTION_MODE=Selection Mode
-option.SELECTION_MODE.comment=Changes the outline that appears when looking at a block. §c[-]§r May not work on some devices or Minecraft versions. Default: Recommended for mod compatibility. Select Color: Choose the color using the sliders here. Versatile: Varying color depending on the block, PBR must be enabled for this to work.
+option.SELECTION_MODE.comment=Changes the outline that appears when looking at a block. §c[-]§r May not work on some devices or Minecraft versions. Default: Recommended for mod compatibility. Select Color: Choose the color using the sliders here. Versatile: Varying color depending on the block, PBR must be enabled for this to work. Rainbow: The selection color changes over time.
 value.SELECTION_MODE.0=Default
 value.SELECTION_MODE.1=Select Color
 value.SELECTION_MODE.2=Versatile
+value.SELECTION_MODE.4=Rainbow
 value.SELECTION_MODE.3=§cDisabled
 
 option.SUN_GLARE=Sun Glare
@@ -796,6 +816,11 @@ option.RAINBOW_BRIGHTNESS.comment=Adjusts the brightness of rainbows.
 
 option.RAINBOW_DIAMETER=Rainbow Diameter
 option.RAINBOW_DIAMETER.comment=Adjusts the size of rainbows.
+
+option.RAINBOW_STYLE=Rainbow Style
+option.RAINBOW_STYLE.comment=Changes the visual style of rainbows.
+value.RAINBOW_STYLE.1=Realistic
+value.RAINBOW_STYLE.2=Cartoon
 
 option.RAINBOW_AFTER_RAIN_CHECK=Rainbow After-Rain Check
 option.RAINBOW_AFTER_RAIN_CHECK.comment=Disabling this makes rainbows appear during all mornings and evenings. With this enabled they only appear just after rain during morning and evenings.
@@ -974,6 +999,9 @@ value.EMISSIVE_LICHEN.0=§cOFF
 value.EMISSIVE_LICHEN.1=Situational
 value.EMISSIVE_LICHEN.2=Always
 
+option.EMISSIVE_AMETHYST_BUDS=Emissive Amethyst Buds
+option.EMISSIVE_AMETHYST_BUDS.comment=Adds glow to amethyst buds/clusters.
+
 option.FANCY_NETHER_PORTAL=Fancy Nether Portal
 option.FANCY_NETHER_PORTAL.comment=Applies emission, color improvements and a parallax effect to nether portals. Type 1: Emission + Parallax. Type 2: Emission + Parallax + Circles
 value.FANCY_NETHER_PORTAL.0=§cOFF
@@ -997,6 +1025,9 @@ option.GREEN_SCREEN.comment=Changes lime concrete and lime wool to green screens
 
 option.BLUE_SCREEN=Blue Screen Blue Blocks
 option.BLUE_SCREEN.comment=Changes blue concrete and blue wool to blue screens. §e[*]§r Pro tip: Put light sources under blue carpets for lighting.
+
+option.ALTERNATIVE_COMMAND_BLOCK=Alternative Command Blocks
+option.ALTERNATIVE_COMMAND_BLOCK.comment=Adds extra color and emission to command block lights.
 
 option.HAND_BLOOM_REDUCTION=Handheld Bloom Reduction
 option.HAND_BLOOM_REDUCTION.comment=Reduces the amount of glow on items/blocks that are in player's hands.
@@ -1023,7 +1054,7 @@ option.FOG2_ALTITUDE_MODE=Atm. Fog Altitude Factor
 option.FOG2_ALTITUDE_MODE.comment=Enables atmospheric fog's altitude factor. §e[*]§r Force-enabled with Compatibility Mode.
 
 option.FOG2_DISTANCE_M=Overworld Atm. Fog Distance Mult.
-option.FOG2_DISTANCE_M.comment=Changes the atmospheric fog's starting distance in the overworld. §e[*]§r This is internally lowered during rain.
+option.FOG2_DISTANCE_M.comment=Changes the atmospheric fog's starting distance in the overworld.
 
 option.FOG2_ALTITUDE=Overworld Atm. Fog Altitude
 option.FOG2_ALTITUDE.comment=Changes the atmospheric fog's altitude in the overworld. §e[*]§r This is ignored by a set percentage during rain.
