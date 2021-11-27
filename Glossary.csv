@@ -1,0 +1,68 @@
+﻿Copyrighted by Wudji & 隐居小树 on mcbbs.net; licensed under CC-BY-NC-SA 4.0.,,,
+English,全称,中文,补充说明
+aberration,,像差,
+anamorphic,,变形、失真变形,与“变形”不同，这里带有“畸变”“失真”的意思
+anti-aliasing,,抗锯齿,
+aurora borealis,,极光,
+blocklight,,方块光照,
+bloom,,泛光,
+blur,,模糊,
+brightness,,亮度,
+caustics,,焦散、散焦,
+channel,,（色彩）通道,
+check,,判断,取引申义
+chromatic,,多彩的,
+chromatic aberration,,色彩偏移,
+color coded gbuffers,,颜色编码几何缓冲,
+color grading,,调色,意译。由其选项。
+colored lighting,,彩色照明,
+compatibility mode,,兼容模式,
+curvature,,曲率,
+displacement,,置换,
+distortion,,扭曲,
+DOF,Depth of field,景深,或是Depth of focus？（焦深？）
+emissive,,自发光的,有时为方便描述，“Emissive sth.“译为“sth. 光晕”，描述为”为sth.添加光晕“。
+ender nebula,,末地星云,
+exposure,,曝光,
+factor,,系数,
+filtering,,滤镜,
+fog,,迷雾,
+foliage,,植被,主要指植物的“叶子”，和leaf类似，不做特别区分
+glint,,闪烁,
+glow,,光晕,
+glowing,,发光的,
+handheld light,,手持光源,
+intensity,,强度,
+lens flare,,镜头光斑,
+light shaft,,光束,维基百科重定向至：Sunbeam（云隙光） 和 Lightwell，统一直译为光束
+lighting,,光照、照明,
+map,,贴图,
+minimum light,,最小光照,
+multiplier,,系数、乘数,
+noise,,噪点、噪波,
+normal,,法线,
+opacity,,不透明度,
+outline,,轮廓线,
+parallax,,视差,
+PBR,Physically based rendering,基于物理引擎的渲染,
+post process,,后处理,
+rain puddle,,雨水坑,指雨后形成的小水坑
+ray tracing,,光线追踪,
+reflection,,反射,
+reflection roughness,,漫反射,意译。由描述“Allows non-translucent surfaces to render subtle sky reflections.”
+refraction,,折射,
+RP,Resource Pack,资源包,来自MCWIKI的翻译，旧译材质包
+saturation,,饱和度,https://digital-photography-school.com/vibrance-vs-saturation-in-plain-english/
+self shadowing,,自阴影,
+sharpen,,使锐化,
+smoke,,烟雾,
+specular maps,,高光贴图,
+specular reflection,,镜面反射、高光反射,
+SSAO,Screen Space Ambient Occlusion,屏幕空间环境光遮蔽,
+strength,,强度,
+subsurface scattering,,强度,来自维基百科的翻译
+tonemap,,色调,
+translucent,,半透明,来自MCWIKI的翻译
+Vanilla,,原版的,指原版Minecraft的着色器
+vibrance,,自然饱和度,https://digital-photography-school.com/vibrance-vs-saturation-in-plain-english/
+vignette,,（镜头）暗角,
