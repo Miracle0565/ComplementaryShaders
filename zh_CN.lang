@@ -12,7 +12,7 @@ profile.comment=§4Potato极低:§r 阴影功能被禁用。 §6低:§r 降低�
 
 #Screens
 screen.ABOUT=Complementary Shaders by EminGT
-screen.ABOUT.comment=主要魔改自 "BSL Shaders"。 非常感谢Capt Tatsu让我发布这个光影。汉化by Wudji。该版本汉化适用于4.2.2版本。汉化发布地址:https://www.mcbbs.net/thread-1262472-1-1.html。
+screen.ABOUT.comment=主要魔改自 "BSL Shaders"。 非常感谢Capt Tatsu让我发布这个光影。译注：简体中文由 MCBBS 隐居小树、Wudji 翻译。该版本汉化适用于4.3版本。汉化发布地址:https://www.mcbbs.net/thread-1262472-1-1.html。
 
 screen.WORLD=世界
 screen.WORLD.comment=应用与世界中的效果。
