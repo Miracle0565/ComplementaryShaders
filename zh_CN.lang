@@ -12,7 +12,7 @@ profile.comment=§4极低:§r 关闭光影和水反. §6低:§r 降低阴影的�
 
 #Screens
 screen.ABOUT=Complementary Shaders by EminGT
-screen.ABOUT.comment=主要魔改自 "BSL Shaders". 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译. 该版本汉化适用于4.3版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
+screen.ABOUT.comment=主要魔改自 "BSL Shaders". 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译. 该版本汉化适用于4.3.x版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
 
 screen.WORLD=世界
 screen.WORLD.comment=应用于世界的效果.
