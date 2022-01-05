@@ -304,6 +304,9 @@ option.NIGHT_VISION.comment=Changes how the night vision status effect works.
 value.NIGHT_VISION.1=Normal
 value.NIGHT_VISION.2=Military
 
+option.VANILLA_UNDERLAVA_COLOR=Vanilla Lava Fog Color
+option.VANILLA_UNDERLAVA_COLOR.comment=Changes the under-lava fog color to the vanilla one.
+
 option.DYNAMIC_SHADER_LIGHT=Shader Handheld Lights
 option.DYNAMIC_SHADER_LIGHT.comment=Runs shader-based dynamic lighting for handheld items.
 
@@ -846,13 +849,13 @@ option.STAR_BRIGHTNESS=Star Brightness
 option.STAR_BRIGHTNESS.comment=Adjusts the brightness of stars.
 
 option.ROUND_SUN_MOON=Shader Sun/Moon
-option.ROUND_SUN_MOON.comment=Enables round sun & moon.
+option.ROUND_SUN_MOON.comment=Enables round sun & moon. §e[*]§r Enable "Vanilla Sun/Moon/Overlay" option as well if you want to use vanilla sun/moon.
 
 option.SKYBOX_BRIGHTNESS=Vanilla Skybox Brightness
 option.SKYBOX_BRIGHTNESS.comment=Adjusts skybox brightness.
 
 option.VANILLA_SKYBOX=Vanilla Sun/Moon/Overlay
-option.VANILLA_SKYBOX.comment=Enables vanilla sky overlays which include square sun/moon and custom resource pack skies. §e[*]§r Disable Shader Sun/Moon option if you want to use vanilla sun/moon. §c[-]§r Changing this can cause problems with some mods.
+option.VANILLA_SKYBOX.comment=Enables vanilla sky overlays which include square sun/moon and custom resource pack skies. §e[*]§r Disable "Shader Sun/Moon" option as well if you want to use vanilla sun/moon. §c[-]§r Changing this can cause problems with some mods.
 
 option.SKY_DAY=Morning/Evening - Intensity
 option.SKY_DAY.comment=Adjusts the intensity of the sky during morning and evening.
@@ -983,6 +986,21 @@ option.EMISSIVE_IRON_ORE.comment=Adds glow to iron ores. §e[*]§r "Emissive Ove
 
 option.EMISSIVE_COPPER_ORE=Emissive Copper Ore
 option.EMISSIVE_COPPER_ORE.comment=Adds glow to copper ores. §e[*]§r "Emissive Overworld Ores" must be enabled.
+
+option.EMISSIVE_GOLD_ORE=Emissive Gold Ore
+option.EMISSIVE_GOLD_ORE.comment=Adds glow to gold ores. §e[*]§r "Emissive Overworld Ores" must be enabled.
+
+option.EMISSIVE_REDSTONE_ORE=Emissive Redstone Ore
+option.EMISSIVE_REDSTONE_ORE.comment=Adds glow to redstone ores. §e[*]§r "Emissive Overworld Ores" must be enabled. §e[*]§r Activated redstone ores will be emissive regardless of this option.
+
+option.EMISSIVE_LAPIS_ORE=Emissive Lapis Lazuli Ore
+option.EMISSIVE_LAPIS_ORE.comment=Adds glow to lapis lazuli ores. §e[*]§r "Emissive Overworld Ores" must be enabled.
+
+option.EMISSIVE_EMERALD_ORE=Emissive Emerald Ore
+option.EMISSIVE_EMERALD_ORE.comment=Adds glow to emerald ores. §e[*]§r "Emissive Overworld Ores" must be enabled.
+
+option.EMISSIVE_DIAMOND_ORE=Emissive Diamond Ore
+option.EMISSIVE_DIAMOND_ORE.comment=Adds glow to diamond ores. §e[*]§r "Emissive Overworld Ores" must be enabled.
 
 option.ORE_EMISSION=Ore Emission Intensity
 option.ORE_EMISSION.comment=Adjusts the intensity of glow on all ores including nether ores and ancient debris.
