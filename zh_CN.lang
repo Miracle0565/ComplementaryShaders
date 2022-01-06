@@ -134,8 +134,8 @@ value.SECRET.0=
 option.TEST=测试
 option.TEST.comment=开发者工具，可能不起效果.
 
-option.COMPATIBILITY_模组E=兼容模式
-option.COMPATIBILITY_模组E.comment=修改许多选项使光影包兼容性更佳, 特别是与部分模组. 该模式会强制禁用“集成PBR+”功能.
+option.COMPATIBILITY_MODE=兼容模式
+option.COMPATIBILITY_MODE.comment=修改许多选项使光影包兼容性更佳, 特别是与部分模组. 该模式会强制禁用“集成PBR+”功能.
 
 option.RP_SUPPORT=资源包支持
 option.RP_SUPPORT.comment=决定如何处理资源包. §b集成PBR+:§r 集成PBR，以及额外的特效; 仅在原版或原版风格的资源包下工作得很好. §a基础:§r 禁用PBR, 帧率会更高. §dPBR:§r 使用镜面和法线贴图; 你需要一个支持 PBR 的资源包, 选择 labPBR 还是 SEUS PBR 取决于你的资源包支持哪种模式.
@@ -184,10 +184,10 @@ option.LIGHT_SHAFT_STRENGTH=光束强度
 option.LIGHT_SHAFT_STRENGTH.comment=调整光束强度. §e[*]§r 更改此项也会影响天空. §e[*]§r 当你调高该选项的值时，推荐同时调高“光束质量”.
 value.LIGHT_SHAFT_STRENGTH.1000.0=§bRTX ON
 
-option.LIGHT_SHAFT_模组E=光束类型
-option.LIGHT_SHAFT_模组E.comment=平衡：像迷雾一样工作的平衡光束. 混合：更多可见的光束，结合了迷雾光束和日光光束的外观，但也意味着更低的地形能见度.
-value.LIGHT_SHAFT_模组E.2=平衡
-value.LIGHT_SHAFT_模组E.3=混合
+option.LIGHT_SHAFT_MODE=光束类型
+option.LIGHT_SHAFT_MODE.comment=平衡：像迷雾一样工作的平衡光束. 混合：更多可见的光束，结合了迷雾光束和日光光束的外观，但也意味着更低的地形能见度.
+value.LIGHT_SHAFT_MODE.2=平衡
+value.LIGHT_SHAFT_MODE.3=混合
 
 option.LIGHT_SHAFT_NOON_MULTIPLIER=光束倍率(正午)
 option.LIGHT_SHAFT_NOON_MULTIPLIER.comment=调整正午时光束的强度 (对日出、日落影响不大).
@@ -225,11 +225,11 @@ option.BLACK_OUTLINE.comment=启用经典的黑色轮廓线.
 option.PROMO_OUTLINE=其他风格轮廓线
 option.PROMO_OUTLINE.comment=启用其它风格的轮廓线.
 
-option.PROMO_OUTLINE_模组E=其他风格轮廓线模式
-option.PROMO_OUTLINE_模组E.comment=改变其他风格轮廓线的样式. Promo: 近白远黑. Half: 近白. Dungeons: 近远均为白.
-value.PROMO_OUTLINE_模组E.1=Promo
-value.PROMO_OUTLINE_模组E.2=Half
-value.PROMO_OUTLINE_模组E.3=Dungeons
+option.PROMO_OUTLINE_MODE=其他风格轮廓线模式
+option.PROMO_OUTLINE_MODE.comment=改变其他风格轮廓线的样式. Promo: 近白远黑. Half: 近白. Dungeons: 近远均为白.
+value.PROMO_OUTLINE_MODE.1=Promo
+value.PROMO_OUTLINE_MODE.2=Half
+value.PROMO_OUTLINE_MODE.3=Dungeons
 
 option.PROMO_OUTLINE_STRENGTH=其他风格轮廓线强度
 option.PROMO_OUTLINE_STRENGTH.comment=调整其他风格选择框的强度.
@@ -294,8 +294,8 @@ option.ANAMORPHIC_BLOOM.comment=改变泛光计算来达到模拟一些相机的
 option.HAND_SWAY=手臂摇晃
 option.HAND_SWAY.comment=为玩家手臂添加摇晃效果以模拟呼吸.
 
-option.SNOW_模组E=积雪模式
-option.SNOW_模组E.comment=在群系的顶部添加雪. §c[-]§r 可能在某些情况下看起来很怪. §e[*]§r  必须启用 PBR.
+option.SNOW_MODE=积雪模式
+option.SNOW_MODE.comment=在群系的顶部添加雪. §c[-]§r 可能在某些情况下看起来很怪. §e[*]§r  必须启用 PBR.
 
 option.GLINT_BRIGHTNESS=附魔光芒强度
 option.GLINT_BRIGHTNESS.comment=调整附魔物品上的附魔光芒强度.
@@ -780,13 +780,13 @@ option.AURORA_DOWN_G=下层 - 绿
 option.AURORA_DOWN_B=下层 - 蓝
 option.AURORA_DOWN_I=下层 - 强度
 
-option.SELECTION_模组E=选择框模式
-option.SELECTION_模组E.comment=改变当你看向方块时的选择框颜色. §c[-]§r 可能不适用于某些设备或 Minecraft 版本. 默认: 为保持与模组兼容性，推荐此设置. 自定: 通过此处滑块来选择颜色. 多样: 取决于指向方块的颜色，且必须启用 PBR. 彩虹: 选择框颜色随时间变化.
-value.SELECTION_模组E.0=默认
-value.SELECTION_模组E.1=自定
-value.SELECTION_模组E.2=多样
-value.SELECTION_模组E.4=彩虹
-value.SELECTION_模组E.3=§c禁用
+option.SELECTION_MODE=选择框模式
+option.SELECTION_MODE.comment=改变当你看向方块时的选择框颜色. §c[-]§r 可能不适用于某些设备或 Minecraft 版本. 默认: 为保持与模组兼容性，推荐此设置. 自定: 通过此处滑块来选择颜色. 多样: 取决于指向方块的颜色，且必须启用 PBR. 彩虹: 选择框颜色随时间变化.
+value.SELECTION_MODE.0=默认
+value.SELECTION_MODE.1=自定
+value.SELECTION_MODE.2=多样
+value.SELECTION_MODE.4=彩虹
+value.SELECTION_MODE.3=§c禁用
 
 option.SUN_GLARE=太阳眩光
 option.SUN_GLARE.comment=启用太阳的眩光. 
@@ -1069,8 +1069,8 @@ value.FOG1_TYPE.2=球形
 option.FOG2=大气雾
 option.FOG2.comment=启用大气雾.
 
-option.FOG2_ALTITUDE_模组E=大气雾高度系数
-option.FOG2_ALTITUDE_模组E.comment=启用大气雾高度系数. §e[*]§r 该选项在兼容模式下被禁用.
+option.FOG2_ALTITUDE_MODE=大气雾高度系数
+option.FOG2_ALTITUDE_MODE.comment=启用大气雾高度系数. §e[*]§r 该选项在兼容模式下被禁用.
 
 option.FOG2_DISTANCE_M=主世界大气雾距离倍率
 option.FOG2_DISTANCE_M.comment=改变主世界中大气雾开始出现的距离.
