@@ -10,7 +10,6 @@ blur,,模糊,
 brightness,,亮度,
 caustics,,焦散、散焦,
 channel,,（色彩）通道,
-check,,判断,取引申义
 chromatic,,多彩的,
 chromatic aberration,,色彩偏移,
 color coded gbuffers,,颜色编码几何缓冲,
@@ -21,7 +20,7 @@ curvature,,曲率,
 displacement,,置换,
 distortion,,扭曲,
 DOF,Depth of field,景深,或是Depth of focus？（焦深？）
-emissive,,自发光的,有时为方便描述，“Emissive sth.“译为“sth. 光晕”，描述为”为sth.添加光晕“。
+emissive,,自发光的,有时为方便描述，“Emissive sth.“译为“sth. 发光效果”，其后描述为“为sth.添加发光效果”。
 ender nebula,,末地星云,
 exposure,,曝光,
 factor,,系数,
@@ -42,9 +41,9 @@ multiplier,,系数、乘数,
 noise,,噪点、噪波,
 normal,,法线,
 opacity,,不透明度,
-outline,,轮廓线,
+outline,,选择框,
 parallax,,视差,
-PBR,Physically based rendering,基于物理引擎的渲染,
+PBR,Physically based rendering,基于物理引擎的渲染,保留，不译
 post process,,后处理,
 rain puddle,,雨水坑,指雨后形成的小水坑
 ray tracing,,光线追踪,
@@ -60,7 +59,7 @@ specular maps,,高光贴图,
 specular reflection,,镜面反射、高光反射,
 SSAO,Screen Space Ambient Occlusion,屏幕空间环境光遮蔽,
 strength,,强度,
-subsurface scattering,,强度,来自维基百科的翻译
+subsurface scattering,,次表面散射,来自维基百科的翻译
 tonemap,,色调,
 translucent,,半透明,来自MCWIKI的翻译
 Vanilla,,原版的,指原版Minecraft的着色器
