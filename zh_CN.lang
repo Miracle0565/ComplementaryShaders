@@ -96,8 +96,8 @@ screen.WATER.comment=关于水的设置
 screen.WATER_NORMALS=波浪设置
 screen.WATER_NORMALS.comment=设置水体法线和水面波纹.
 
-screen.OUTLINES=选择框设置
-screen.OUTLINES.comment=设置位于方块边缘的选择框.
+screen.OUTLINES=轮廓线设置
+screen.OUTLINES.comment=设置位于方块边缘的轮廓线.
 
 screen.WAVING_CONFIG=摇摆效果设置
 screen.WAVING_CONFIG.comment=关于风中摇摆效果的设置.
@@ -714,16 +714,16 @@ option.AMBIENT_GROUND=表面环境强度
 option.AMBIENT_GROUND.comment=表面上的所有太阳和月亮环境颜色与之正相关（不影响天空）.
 
 option.NIGHT_BRIGHTNESS=夜晚亮度
-option.NIGHT_BRIGHTNESS.comment=调节夜晚大多数照明的亮度.
+option.NIGHT_BRIGHTNESS.comment=调节夜晚一般照明的亮度.
 
 option.MOON_PHASE_LIGHTING=月相影响
-option.MOON_PHASE_LIGHTING.comment=使月亮相位影响夜晚的亮度.Enables moon phase dependant night time brightness.
+option.MOON_PHASE_LIGHTING.comment=使月亮相位影响夜晚的亮度.
 option.NIGHT_LIGHTING_FULL_MOON=月相 - 满月
-option.NIGHT_LIGHTING_FULL_MOON.comment=当“月相影响”被启用时，在满月期间增加夜晚的亮度.
+option.NIGHT_LIGHTING_FULL_MOON.comment=当启用“月相影响”时，将在满月期间增加夜晚的亮度.
 option.NIGHT_LIGHTING_PARTIAL_MOON=月相 - 弦月
-option.NIGHT_LIGHTING_PARTIAL_MOON.comment=当“月相影响”被启用时，在弦月期间增加夜晚的亮度.
+option.NIGHT_LIGHTING_PARTIAL_MOON.comment=当启用“月相影响”时，将在弦月期间增加夜晚的亮度.
 option.NIGHT_LIGHTING_NEW_MOON=月相 - 新月
-option.NIGHT_LIGHTING_NEW_MOON.comment=当“月相影响”被启用时，在新月期间增加夜晚的亮度.
+option.NIGHT_LIGHTING_NEW_MOON.comment=当启用“月相影响”时，将在新月期间增加夜晚的亮度.
 
 option.BLOCKLIGHT_R=红
 option.BLOCKLIGHT_G=绿
@@ -1066,47 +1066,47 @@ value.FOG1_TYPE.0=圆柱形
 value.FOG1_TYPE.1=混合
 value.FOG1_TYPE.2=球形
 
-option.FOG2=大气雾
-option.FOG2.comment=启用大气雾.
+option.FOG2=大气迷雾
+option.FOG2.comment=启用大气迷雾.
 
-option.FOG2_ALTITUDE_MODE=大气雾高度系数
-option.FOG2_ALTITUDE_MODE.comment=启用大气雾高度系数. §e[*]§r 该选项在兼容模式下被禁用.
+option.FOG2_ALTITUDE_MODE=大气迷雾高度系数
+option.FOG2_ALTITUDE_MODE.comment=启用大气迷雾高度系数. §e[*]§r 该选项在兼容模式下被禁用.
 
-option.FOG2_DISTANCE_M=主世界大气雾距离倍率
-option.FOG2_DISTANCE_M.comment=改变主世界中大气雾开始出现的距离.
+option.FOG2_DISTANCE_M=主世界大气迷雾距离倍率
+option.FOG2_DISTANCE_M.comment=改变主世界中大气迷雾开始出现的距离.
 
-option.FOG2_ALTITUDE=主世界大气雾高度
-option.FOG2_ALTITUDE.comment=改变主世界中大气雾的高度. §e[*]§r 该选项在下雨时会强制被预设的百分比覆盖.
+option.FOG2_ALTITUDE=主世界大气迷雾高度
+option.FOG2_ALTITUDE.comment=改变主世界中大气迷雾的高度. §e[*]§r 该选项在下雨时会强制被预设的百分比覆盖.
 
-option.FOG2_BRIGHTNESS=主世界大气雾亮度
-option.FOG2_BRIGHTNESS.comment=改变主世界中大气雾的亮度.
+option.FOG2_BRIGHTNESS=主世界大气迷雾亮度
+option.FOG2_BRIGHTNESS.comment=改变主世界中大气迷雾的亮度.
 
-option.FOG2_OPACITY=主世界大气雾不透明性
-option.FOG2_OPACITY.comment=改变主世界中大气雾的密度/不透明度. §e[*]§r 该选项会在下雨或夜晚时被调高.
+option.FOG2_OPACITY=主世界大气迷雾不透明性
+option.FOG2_OPACITY.comment=改变主世界中大气迷雾的密度/不透明度. §e[*]§r 该选项会在下雨或夜晚时被调高.
 
-option.FOG2_END_DISTANCE_M=末地大气雾距离倍率
-option.FOG2_END_DISTANCE_M.comment=改变末地中大气雾开始出现的距离.
+option.FOG2_END_DISTANCE_M=末地大气迷雾距离倍率
+option.FOG2_END_DISTANCE_M.comment=改变末地中大气迷雾开始出现的距离.
 
-option.FOG2_END_ALTITUDE=末地大气雾高度
-option.FOG2_END_ALTITUDE.comment=改变末地中大气雾的高度.
+option.FOG2_END_ALTITUDE=末地大气迷雾高度
+option.FOG2_END_ALTITUDE.comment=改变末地中大气迷雾的高度.
 
-option.FOG2_END_BRIGHTNESS=末地大气雾亮度
-option.FOG2_END_BRIGHTNESS.comment=改变末地中大气雾的亮度.
+option.FOG2_END_BRIGHTNESS=末地大气迷雾亮度
+option.FOG2_END_BRIGHTNESS.comment=改变末地中大气迷雾的亮度.
 
-option.FOG2_END_OPACITY=末地大气雾不透明度
-option.FOG2_END_OPACITY.comment=改变主世界中大气雾的密度/不透明度/亮度.
+option.FOG2_END_OPACITY=末地大气迷雾不透明度
+option.FOG2_END_OPACITY.comment=改变主世界中大气迷雾的密度/不透明度/亮度.
 
 option.FOG2_RAIN_OPACITY_M=雨雾不透明度倍率
-option.FOG2_RAIN_OPACITY_M.comment=调整下雨时大气雾的不透明度. §e[*]§r 最终的值不能大于1.
+option.FOG2_RAIN_OPACITY_M.comment=调整下雨时大气迷雾的不透明度. §e[*]§r 最终的值不能大于1.
 
 option.FOG2_RAIN_BRIGHTNESS_M=雨雾亮度倍率
-option.FOG2_RAIN_BRIGHTNESS_M.comment=调整下雨时大气雾的亮度.
+option.FOG2_RAIN_BRIGHTNESS_M.comment=调整下雨时大气迷雾的亮度.
 
 option.FOG2_RAIN_ALTITUDE_M=雨雾高度百分比
 option.FOG2_RAIN_ALTITUDE_M.comment=决定在下雨期间将忽略多少高度因子. 百分比高时，到处都会出现雨雾；而百分比低时，雨雾主要出现在设定的高度.(注:该条翻译仅供参考)
 
 option.FOG2_RAIN_DISTANCE_M=雨雾距离倍率Rain Fog Distance Multiplier
-option.FOG2_RAIN_DISTANCE_M.comment=调整下雨时大气雾开始出现的距离. 更高的值会使雾离玩家更近, 更低的值会导致雾的距离远.
+option.FOG2_RAIN_DISTANCE_M.comment=调整下雨时大气迷雾开始出现的距离. 更高的值会使雾离玩家更近, 更低的值会导致雾的距离远.
 
 option.WORLD_CURVATURE=世界曲率
 option.WORLD_CURVATURE.comment=启用地表弯曲效果. §e[*]§r 如欲修复丢失的区块，打开 shaders.properties 文件，并删除 frustum culling 相关行的注释.
@@ -1121,7 +1121,7 @@ value.END_CURVATURE_SIZE.999999=无
 option.WORLD_TIME_ANIMATION=世界时间动画
 option.WORLD_TIME_ANIMATION.comment=为移动的对象使用游戏内时间. §a[+]§r 当该选项开启时, 类似云的东西会与在同一世界的其他玩家同步. §c[-]§r 世界时间动画最高20帧, 这意味着动画可能看起来有亿点不平滑, 但是TAA可能在某种程度上有所帮助.
 value.WORLD_TIME_ANIMATION.0=§c关
-value.WORLD_TIME_ANIMATION.1=S仅天空 §a[+]
+value.WORLD_TIME_ANIMATION.1=仅天空 §a[+]
 value.WORLD_TIME_ANIMATION.2=§c全开
 
 option.ANIMATION_SPEED=动画速度
