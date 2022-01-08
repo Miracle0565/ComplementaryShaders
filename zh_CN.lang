@@ -23,7 +23,7 @@ screen.WORLD_CURVATURE_CONFIG.comment=关于地平线弯曲程度的设置.
 screen.MATERIALS=材质
 screen.MATERIALS.comment=关于“材质”的设置.
 screen.COMPBR=集成PBR设置
-screen.COMPBR.comment=关于“集成PBR”的设置. §e[*]§r 仅当将“资源包支持”设为“集成PBR+”生效.
+screen.COMPBR.comment=关于“集成PBR”的设置. §e[*]§r 仅当将“纹理包支持”设为“集成PBR+”生效.
 screen.COMPBRORES=矿石发光效果
 screen.COMPBRORES.comment=关于发光矿石的设置.
 screen.COMPBRMISC=更多“集成PBR”设置
@@ -31,7 +31,7 @@ screen.COMPBRMISC.comment=其余的“集成PBR”设置.
 screen.EMISSIVES=自发光设置
 screen.EMISSIVES.comment=设置某个东西到底有多亮.
 screen.NORMALS=与法线贴图有关的设置
-screen.NORMALS.comment=关于使用法线贴图的效果的设置. §e[*]§r 仅当将“资源包支持”设为“labPBR”或“SEUS PBR”生效.
+screen.NORMALS.comment=关于使用法线贴图的效果的设置. §e[*]§r 仅当将“纹理包支持”设为“labPBR”或“SEUS PBR”生效.
 
 screen.OTHER=其他
 screen.OTHER.comment=不知道该放到哪类的效果.
@@ -137,12 +137,12 @@ option.TEST.comment=开发者工具，可能不起效果.
 option.COMPATIBILITY_MODE=兼容模式
 option.COMPATIBILITY_MODE.comment=修改许多选项使光影包兼容性更佳, 特别是与部分模组. 该模式会强制禁用“集成PBR+”功能.
 
-option.RP_SUPPORT=资源包支持
-option.RP_SUPPORT.comment=决定如何处理资源包. §b集成PBR+:§r 集成PBR，以及额外的特效; 仅在原版或原版风格的资源包下工作得很好. §a基础:§r 禁用PBR, 帧率会更高. §dPBR:§r 使用镜面和法线贴图; 你需要一个支持 PBR 的资源包, 选择 labPBR 还是 SEUS PBR 取决于你的资源包支持哪种模式.
+option.RP_SUPPORT=纹理包支持
+option.RP_SUPPORT.comment=决定如何处理纹理包. §b集成PBR+:§r 集成PBR，以及额外的特效; 仅在原版或原版风格的纹理包下工作得很好. §a基础:§r 禁用PBR, 帧率会更高. §dPBR:§r 使用镜面和法线贴图; 你需要一个支持 PBR 的纹理包, 选择 labPBR 还是 SEUS PBR 取决于你的纹理包支持哪种模式.
 value.RP_SUPPORT.1=§b集成 PBR+
 value.RP_SUPPORT.2=§a基础 (禁用 PBR)
-value.RP_SUPPORT.3=§dlabPBR (需要资源包)
-value.RP_SUPPORT.4=§dSEUS PBR (需要资源包)
+value.RP_SUPPORT.3=§dlabPBR (需要纹理包)
+value.RP_SUPPORT.4=§dSEUS PBR (需要纹理包)
 
 option.AO_QUALITY=SSAO 质量
 option.AO_QUALITY.comment=调整屏幕空间环境光遮蔽（SSAO）的质量. §e[*]§r 当TAA设为关时，“低”会强制设置为“中”.
@@ -217,7 +217,7 @@ option.WATER_TRANSLUCENT_SKY_REF=水面和透明天空反射
 option.WATER_TRANSLUCENT_SKY_REF.comment=允许水面和透明物体的表面渲染来自天空的反射.
 
 option.EMISSIVE_MULTIPLIER=自发光系数
-option.EMISSIVE_MULTIPLIER.comment=调整由资源包高光贴图控制的自发光物品的亮度.
+option.EMISSIVE_MULTIPLIER.comment=调整由纹理包高光贴图控制的自发光物品的亮度.
 
 option.BLACK_OUTLINE=黑色轮廓线
 option.BLACK_OUTLINE.comment=启用经典的黑色轮廓线.
@@ -280,7 +280,7 @@ option.SHOW_RAY_TRACING=高亮光线追踪
 option.SHOW_RAY_TRACING.comment=高亮经过光线追踪的像素. 但这不包括水，因为它总以光线追踪渲染. 
 
 option.METALLIC_WORLD=金属质感的世界
-option.METALLIC_WORLD.comment=让所有方块拥有金属质感. §e[*]§r “资源包支持”必须设置为“集成PBR+”
+option.METALLIC_WORLD.comment=让所有方块拥有金属质感. §e[*]§r “纹理包支持”必须设置为“集成PBR+”
 
 option.WAVING_EVERYTHING=任~何~东~西~都~在~晃~
 option.WAVING_EVERYTHING.comment=使任何东西都晃起来.
@@ -417,13 +417,13 @@ option.FIRE_INTENSITY=火焰亮度
 option.FIRE_INTENSITY.comment=调整火焰的亮度. 同时生效于灵魂火.
 
 option.NORMAL_MAPPING=法线贴图
-option.NORMAL_MAPPING.comment=为labPBR和SME资源包启用法线贴图支持.
+option.NORMAL_MAPPING.comment=为labPBR和SME纹理包启用法线贴图支持.
 
 option.PARALLAX=视差遮挡贴图
-option.PARALLAX.comment=在使用高度贴图的表面上添加遮蔽. §e[*]§r 仅支持labPBR 或 SEUS PBR 资源包. 
+option.PARALLAX.comment=在使用高度贴图的表面上添加遮蔽. §e[*]§r 仅支持labPBR 或 SEUS PBR 纹理包. 
 
 option.PARALLAX_DEPTH=视差深度
-option.PARALLAX_DEPTH.comment=调整视察深度. §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包
+option.PARALLAX_DEPTH.comment=调整视察深度. §e[*]§r 仅支持 labPBR 或 SEUS PBR 纹理包
 value.PARALLAX_DEPTH.0.20=0.20 (5 厘米)
 value.PARALLAX_DEPTH.0.40=0.40 (10 厘米)
 value.PARALLAX_DEPTH.0.60=0.60 (15 厘米)
@@ -436,28 +436,28 @@ value.PARALLAX_DEPTH.1.80=1.80 (45 厘米)
 value.PARALLAX_DEPTH.2.00=2.00 (50 厘米)
 
 option.SELF_SHADOW=自投影(Self Shadowing)
-option.SELF_SHADOW.comment=允许表面使用高度贴图向自己投射阴影. §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包
+option.SELF_SHADOW.comment=允许表面使用高度贴图向自己投射阴影. §e[*]§r 仅支持 labPBR 或 SEUS PBR 纹理包
 
 option.SELF_SHADOW_ANGLE=自投影角度
-option.SELF_SHADOW_ANGLE.comment=调整自投影角度, 更大的值会使阴影显示得更远. §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包
+option.SELF_SHADOW_ANGLE.comment=调整自投影角度, 更大的值会使阴影显示得更远. §e[*]§r 仅支持 labPBR 或 SEUS PBR 纹理包
 
 option.PARALLAX_QUALITY=视差质量
-option.PARALLAX_QUALITY.comment=调整视差贴图和其阴影的渲染距离. §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包
+option.PARALLAX_QUALITY.comment=调整视差贴图和其阴影的渲染距离. §e[*]§r 仅支持 labPBR 或 SEUS PBR 纹理包
 
 option.PARALLAX_DISTANCE=视差距离
-option.PARALLAX_DISTANCE.comment=调整视差贴图和其阴影能被渲染的距离. §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包
+option.PARALLAX_DISTANCE.comment=调整视差贴图和其阴影能被渲染的距离. §e[*]§r 仅支持 labPBR 或 SEUS PBR 纹理包
 
 option.DIRECTIONAL_LIGHTMAP=方向性光照贴图
-option.DIRECTIONAL_LIGHTMAP.comment=为原版光照贴图添加法线贴图. §c[-]§r 可能使光照贴图看起来很怪. §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包
+option.DIRECTIONAL_LIGHTMAP.comment=为原版光照贴图添加法线贴图. §c[-]§r 可能使光照贴图看起来很怪. §e[*]§r 仅支持 labPBR 或 SEUS PBR 纹理包
 
 option.DIRECTIONAL_LIGHTMAP_STRENGTH=方向性光照贴图强度
-option.DIRECTIONAL_LIGHTMAP_STRENGTH.comment=调整方向性光照贴图的强度. §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包
+option.DIRECTIONAL_LIGHTMAP_STRENGTH.comment=调整方向性光照贴图的强度. §e[*]§r 仅支持 labPBR 或 SEUS PBR 纹理包
 
 option.NORMAL_MULTIPLIER=法线倍率
 option.NORMAL_MULTIPLIER.comment=调整法线的强度. 更低的值使其更平滑.
 
 option.GENERATED_NORMALS=自动生成法线
-option.GENERATED_NORMALS.comment=通过原本贴图颜色的不同自动生成对应的法线贴图. §c[-]§r 部分资源包可能有问题.
+option.GENERATED_NORMALS.comment=通过原本贴图颜色的不同自动生成对应的法线贴图. §c[-]§r 部分纹理包可能有问题.
 
 option.DOF=类型
 value.DOF.1=景深
@@ -856,7 +856,7 @@ option.SKYBOX_BRIGHTNESS=原版天空盒亮度
 option.SKYBOX_BRIGHTNESS.comment=调整天空盒亮度.
 
 option.VANILLA_SKYBOX=原版日月贴图
-option.VANILLA_SKYBOX.comment=启用原版天空贴图，包括方形日月、自定义资源包的星空.  §e[*]§r 如果想使用原版的太阳和月亮，还需要禁用“基于光影的日月”。§c[-]§r 更改该选项可能会导致模组兼容性问题.
+option.VANILLA_SKYBOX.comment=启用原版天空贴图，包括方形日月、自定义纹理包的星空.  §e[*]§r 如果想使用原版的太阳和月亮，还需要禁用“基于光影的日月”。§c[-]§r 更改该选项可能会导致模组兼容性问题.
 
 option.SKY_DAY=清晨/夜晚 - 强度
 option.SKY_DAY.comment=调整清晨和夜晚天空的强度.
