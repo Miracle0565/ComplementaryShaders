@@ -1,6 +1,6 @@
 #shaders/lang/zh_CN.lang
 #本汉化文档以 CC BY-NC-SA 4.0 协议进行许可.
-#汉化文档版本号 4.3.3a
+#汉化文档版本号 4.4
 #Profiles
 profile.POTATO=§4极低
 profile.LOW=§6低
@@ -13,7 +13,7 @@ profile.comment=§4极低:§r 禁用阴影和水面反射. §6低:§r 降低阴�
 
 #Screens
 screen.ABOUT=Complementary Shaders by EminGT
-screen.ABOUT.comment=主要魔改自“BSL Shaders”. 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于4.3.3版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
+screen.ABOUT.comment=主要魔改自“BSL Shaders”. 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于 4.4 版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
 
 screen.WORLD=世界
 screen.WORLD.comment=应用于世界的效果.
@@ -297,6 +297,13 @@ option.HAND_SWAY.comment=为玩家手臂添加摇晃效果以模拟呼吸.
 option.SNOW_MODE=积雪模式
 option.SNOW_MODE.comment=在群系的顶部添加雪. §c[-]§r 可能在某些情况下看起来很怪. §e[*]§r  必须启用 PBR.
 
+option.NETHER_REFRACT=下界折射
+option.NETHER_REFRACT.comment=为下界添加因热浪引起的大气折射 §e[*]§r 强烈的折射会产生虚影.
+value.NETHER_REFRACT.0=§c关
+value.NETHER_REFRACT.1=细微
+value.NETHER_REFRACT.2=正常
+value.NETHER_REFRACT.3=强烈
+
 option.GLINT_BRIGHTNESS=附魔光芒强度
 option.GLINT_BRIGHTNESS.comment=调整附魔物品上的附魔光芒强度.
 
@@ -344,7 +351,10 @@ option.WAVING_SPEED=摇摆速率
 option.WAVING_SPEED.comment=调整摇摆物体的摇摆速率.
 
 option.WAVING_INTENSITY=摇摆幅度
-option.WAVING_INTENSITY.comment=调整摇摆内容的摇摆幅度.
+option.WAVING_INTENSITY.comment=调整摇摆物体的摇摆幅度.
+
+option.RAIN_WAVING_INTENSITY=雨天摇摆幅度系数
+option.RAIN_WAVING_INTENSITY.comment=调整摇摆物体在下雨时的摇摆幅度.
 
 option.NETHER_FOG=下界迷雾
 option.NETHER_FOG.comment=启用下界迷雾. §e[*]§r "边界迷雾" 必须被设为开. §e[*]§r 受 "边界迷雾距离" 滑动条的影响.
@@ -459,6 +469,9 @@ option.NORMAL_MULTIPLIER.comment=调整法线的强度. 更低的值使其更平
 option.GENERATED_NORMALS=自动生成法线
 option.GENERATED_NORMALS.comment=通过原本贴图颜色的不同自动生成对应的法线贴图. §c[-]§r 部分资源包可能有问题.
 
+option.SAFE_GENERATED_NORMALS=资源包兼容性调整
+option.SAFE_GENERATED_NORMALS.comment=更改自动生成法线和噪点涂层纹理的计算，从而更好地处理具有不同分辨率纹理的资源包. §c[-]§r 启用此项将使非立方体块生成不正确的法线.
+
 option.DOF=类型
 value.DOF.1=景深
 value.DOF.2=距离模糊
@@ -485,7 +498,7 @@ option.ANAMORPHIC_BLUR=变形模糊
 option.ANAMORPHIC_BLUR.comment=纵向拉伸模糊效果. §e[*]§r 需启用“景深”“距离模糊”“下界模糊”. §c[-]§r 可能会使模糊稍微不精确.
 
 option.FOV_SCALED_BLUR=基于 FOV 的模糊
-option.FOV_SCALED_BLUR.comment=取决于你的视场角（FOV）或缩放距离来调节模糊程度. 如果你不想在放大视野的时候被闪晃眼，那就禁用此选项.
+option.FOV_SCALED_BLUR.comment=取决于你的视场角（FOV）或缩放距离来调节模糊程度. §e[*]§r 如果你不想在放大视野的时候被闪晃眼，那就禁用此选项.
 
 option.CHROMATIC_BLUR=多彩模糊
 option.CHROMATIC_BLUR.comment=对模糊区域应用色彩偏移效果. §e[*]§r 当启用此项时，建议禁用“色彩偏移”选项.
@@ -497,11 +510,14 @@ option.MOTION_BLUR_STRENGTH=动态模糊强度
 option.MOTION_BLUR_STRENGTH.comment=调整动态模糊强度.
 
 option.BLOOM=泛光
-option.BLOOM.comment=允许明亮的物体发光.
+option.BLOOM.comment=允许明亮的物体发光. §a[+]§r 该选项得益于 TAA.
 
 option.BLOOM_STRENGTH=泛光强度
 option.BLOOM_STRENGTH.comment=调整泛光强度.
 value.BLOOM_STRENGTH.100=§bBSL
+
+option.UNDERWATER_BLOOM_STRENGTH=水下泛光强度
+option.UNDERWATER_BLOOM_STRENGTH.comment=调节当玩家处于水下时的泛光强度.
 
 option.NETHER_BLOOM_STRENGTH=下界泛光强度
 option.NETHER_BLOOM_STRENGTH.comment=调整下界中泛光的强度.
@@ -513,7 +529,7 @@ option.LENS_FLARE_STRENGTH=镜头光斑强度
 option.LENS_FLARE_STRENGTH.comment=调整镜头光斑的强度.
 
 option.AA=抗锯齿
-option.AA.comment=启用抗锯齿. FXAA：对锯齿边缘应用一些智能模糊. LiteTAA：使用前一帧过滤下一帧. IntenseTAA：良好的抗锯齿和过滤，但会导致更多的闪烁和伪影. §a[+]§r 某些效果需要 TAA 才能保持平滑；除非不喜欢平滑的图像，否则不要禁用它.
+option.AA.comment=启用抗锯齿. FXAA：对锯齿边缘应用一些智能模糊. LiteTAA：使用前一帧过滤下一帧. IntenseTAA：良好的抗锯齿和过滤，但会导致更多的闪烁和虚影. §a[+]§r 某些效果需要 TAA 才能保持平滑；除非不喜欢平滑的图像，否则不要禁用它.
 value.AA.0=§c关
 value.AA.1=§cFXAA
 value.AA.2=LiteTAA
@@ -533,7 +549,10 @@ value.AUTO_EXPOSURE.2=高
 option.AUTO_EXPOSURE.comment=自动调整整体的亮度.
 
 option.VIGNETTE=暗角
-option.Vignette.comment=将屏幕边缘淡化为黑色. §e[*]§r 360度图像模式下禁用.
+option.Vignette.comment=将屏幕边缘淡化为黑色（经典）或白色. §e[*]§r 360度图像模式下禁用.
+value.VIGNETTE.0=关
+value.VIGNETTE.1=经典
+value.VIGNETTE.2=白色
 
 option.VIGNETTE_STRENGTH=暗角强度
 option.VIGNETTE_STRENGTH.comment=调整暗角强度.
@@ -625,11 +644,11 @@ option.SHADOW_FILTER.comment=启用阴影滤镜. §a[+]§r 该效果得益于TAA
 option.sunPathRotation=日月轨迹旋转
 option.sunPathRotation.comment=调整太阳和月亮的角度.
 
-option.SHADOW_SUBSURFACE=次表面散射
-option.SHADOW_SUBSURFACE.comment=使光线能穿过物体.
+option.SHADOW_SUBSURFACE=次表面散射质量
+option.SHADOW_SUBSURFACE.comment=使光线能穿过诸如植被等的物体. §e[*]§r “极致”选项将平滑次表面散射方块上的噪点，但仅在启用 TAA 时生效. §c[-]§r 对性能有影响.
 value.SHADOW_SUBSURFACE.0=§c关
-value.SHADOW_SUBSURFACE.1=仅植物
-value.SHADOW_SUBSURFACE.2=启用
+value.SHADOW_SUBSURFACE.1=中等
+value.SHADOW_SUBSURFACE.2=极致
 
 option.SCATTERING_FOLIAGE=次表面散射倍率 - 植物
 option.SCATTERING_FOLIAGE.comment=调整植物次表面散射的强度. 更高的值会使枝叶在阳光下下看起来更亮.
@@ -795,7 +814,7 @@ option.SUN_GLARE_STRENGTH=太阳眩光强度
 option.SUN_GLARE_STRENGTH.comment=调整太阳周围的额外天空亮度.
 
 option.CLOUDS=基于光影的云
-option.CLOUDS.comment=启用基于光影的云. §e[*]§r 当该选项被设为关时，视频设置中云的选项会决定原版的云是否出现.. §a[+]§r 该选项受益于 TAA. §c[-]§r 禁用此功能可能会导致某些模组出现问题.
+option.CLOUDS.comment=启用基于光影的云. §e[*]§r 当该选项被设为关时，视频设置中云的选项会决定原版的云是否出现.. §a[+]§r 该选项得益于 TAA. §c[-]§r 禁用此功能可能会导致某些模组出现问题.
 
 option.ENDER_NEBULA=末地星云
 option.ENDER_NEBULA.comment=在末地群系中启用星云.
@@ -850,13 +869,16 @@ option.STAR_BRIGHTNESS=星星亮度
 option.STAR_BRIGHTNESS.comment=调整星星的亮度.
 
 option.ROUND_SUN_MOON=基于光影的日月
-option.ROUND_SUN_MOON.comment=启用圆形的太阳和月亮. §e[*]§r 如果你想要原版的太阳和月亮的话，启用“原版日月贴图”.
+option.ROUND_SUN_MOON.comment=启用圆形的太阳和月亮. §e[*]§r 如果你想要原版的太阳和月亮的话，禁用此项并启用“原版日月贴图”.
 
 option.SKYBOX_BRIGHTNESS=原版天空盒亮度
 option.SKYBOX_BRIGHTNESS.comment=调整天空盒亮度.
 
 option.VANILLA_SKYBOX=原版日月贴图
-option.VANILLA_SKYBOX.comment=启用原版天空贴图，包括方形日月、自定义资源包的星空.  §e[*]§r 如果想使用原版的太阳和月亮，还需要禁用“基于光影的日月”。§c[-]§r 更改该选项可能会导致模组兼容性问题.
+option.VANILLA_SKYBOX.comment=启用原版天空贴图，包括方形日月、自定义资源包的星空.  §e[*]§r 如果想使用原版的太阳和月亮，需禁用“基于光影的日月”。§c[-]§r 更改该选项可能会导致模组兼容性问题.
+
+option.SUN_MOON_HORIZON=日月地平线
+option.SUN_MOON_HORIZON.comment=使日月消失在地平线以下.
 
 option.SKY_DAY=清晨/夜晚 - 强度
 option.SKY_DAY.comment=调整清晨和夜晚天空的强度.
@@ -924,7 +946,7 @@ option.WATER_DISPLACEMENT=水体置换
 option.WATER_DISPLACEMENT.comment=启用水体置换.
 
 option.WATER_PARALLAX=水体视差
-option.WATER_PARALLAX.comment=启用水体置换，这有助于使水法线看起来更像实际的波浪.
+option.WATER_PARALLAX.comment=使用水法线来计算虚水体置换，这有助于使水法线看起来更像真实的波浪.
 
 option.WATER_BUMP=水面起伏
 option.WATER_BUMP.comment=调整水法线的密度. §e[*]§r 如果改变水体类型，则该值会被自动除以 5.
@@ -1051,8 +1073,8 @@ option.ALTERNATIVE_COMMAND_BLOCK.comment=为命令方块添加了更多颜色和
 option.HAND_BLOOM_REDUCTION=降低手持发光物品的亮度
 option.HAND_BLOOM_REDUCTION.comment=降低玩家手中发光的物品/方块的亮度.
 
-option.ENTITY_NORMAL_FIX=1.15+实体法线贴图修复
-option.ENTITY_NORMAL_FIX.comment=禁用1.15中实体的法线贴图(因为Optifine不支持它们).
+option.ENTITY_NORMAL_FIX=实体法线贴图修复
+option.ENTITY_NORMAL_FIX.comment=禁用旧版本中的实体法线贴图（因为 Optifine/Iris 不支持它们）.
 
 option.FOG1=边界迷雾
 option.FOG1.comment=启用用于挡住未加载的区域的迷雾，就像原版那样.
