@@ -1,6 +1,6 @@
 #shaders/lang/zh_CN.lang
 #本汉化文档以 CC BY-NC-SA 4.0 协议进行许可.
-#汉化文档版本号 4.4
+#汉化文档版本号 4.4a
 #Profiles
 profile.POTATO=§4极低
 profile.LOW=§6低
@@ -298,7 +298,7 @@ option.SNOW_MODE=积雪模式
 option.SNOW_MODE.comment=在群系的顶部添加雪. §c[-]§r 可能在某些情况下看起来很怪. §e[*]§r  必须启用 PBR.
 
 option.NETHER_REFRACT=下界折射
-option.NETHER_REFRACT.comment=为下界添加因热浪引起的大气折射 §e[*]§r 强烈的折射会产生虚影.
+option.NETHER_REFRACT.comment=为下界热源附近添加因热浪引起的大气折射. §e[*]§r “强烈”选项会产生虚影.
 value.NETHER_REFRACT.0=§c关
 value.NETHER_REFRACT.1=细微
 value.NETHER_REFRACT.2=正常
@@ -549,7 +549,7 @@ value.AUTO_EXPOSURE.2=高
 option.AUTO_EXPOSURE.comment=自动调整整体的亮度.
 
 option.VIGNETTE=暗角
-option.Vignette.comment=将屏幕边缘淡化为黑色（经典）或白色. §e[*]§r 360度图像模式下禁用.
+option.Vignette.comment=将屏幕边缘淡化为黑色（经典）或白色. §e[*]§r 在 360 度图像模式下禁用.
 value.VIGNETTE.0=关
 value.VIGNETTE.1=经典
 value.VIGNETTE.2=白色
@@ -645,7 +645,7 @@ option.sunPathRotation=日月轨迹旋转
 option.sunPathRotation.comment=调整太阳和月亮的角度.
 
 option.SHADOW_SUBSURFACE=次表面散射质量
-option.SHADOW_SUBSURFACE.comment=使光线能穿过诸如植被等的物体. §e[*]§r “极致”选项将平滑次表面散射方块上的噪点，但仅在启用 TAA 时生效. §c[-]§r 对性能有影响.
+option.SHADOW_SUBSURFACE.comment=使光线能穿透并散射诸如植被等的物体. §e[*]§r “极致”选项将平滑次表面散射方块上的噪点，但仅在启用 TAA 时生效. §c[-]§r 对性能有影响.
 value.SHADOW_SUBSURFACE.0=§c关
 value.SHADOW_SUBSURFACE.1=中等
 value.SHADOW_SUBSURFACE.2=极致
@@ -869,7 +869,7 @@ option.STAR_BRIGHTNESS=星星亮度
 option.STAR_BRIGHTNESS.comment=调整星星的亮度.
 
 option.ROUND_SUN_MOON=基于光影的日月
-option.ROUND_SUN_MOON.comment=启用圆形的太阳和月亮. §e[*]§r 如果你想要原版的太阳和月亮的话，禁用此项并启用“原版日月贴图”.
+option.ROUND_SUN_MOON.comment=启用圆形的太阳和月亮. §e[*]§r 如果你只想要原版的日月，禁用此项并启用“原版日月贴图”.
 
 option.SKYBOX_BRIGHTNESS=原版天空盒亮度
 option.SKYBOX_BRIGHTNESS.comment=调整天空盒亮度.
