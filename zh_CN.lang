@@ -297,8 +297,8 @@ option.HAND_SWAY.comment=为玩家手臂添加摇晃效果以模拟呼吸.
 option.SNOW_MODE=积雪模式
 option.SNOW_MODE.comment=在群系的顶部添加雪. §c[-]§r 可能在某些情况下看起来很怪. §e[*]§r  必须启用 PBR.
 
-option.NETHER_REFRACT=下界折射
-option.NETHER_REFRACT.comment=为下界热源附近添加因热浪引起的大气折射. §e[*]§r “强烈”选项会产生虚影.
+option.NETHER_REFRACT=下界热浪效果
+option.NETHER_REFRACT.comment=为下界热源附近添加热浪折射效果. §e[*]§r “强烈”选项会产生虚影.
 value.NETHER_REFRACT.0=§c关
 value.NETHER_REFRACT.1=细微
 value.NETHER_REFRACT.2=正常
