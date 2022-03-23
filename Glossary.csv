@@ -60,6 +60,7 @@ specular reflection,,镜面反射、高光反射,
 SSAO,Screen Space Ambient Occlusion,屏幕空间环境光遮蔽,
 strength,,强度,
 subsurface scattering,,次表面散射,来自维基百科的翻译
+texture,,纹理,
 tonemap,,色调,
 translucent,,半透明,来自MCWIKI的翻译
 Vanilla,,原版的,指原版Minecraft的着色器

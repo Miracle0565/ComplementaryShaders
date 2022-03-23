@@ -296,6 +296,13 @@ option.HAND_SWAY.comment=Adds movement to player's hand in order to simulate bre
 option.SNOW_MODE=Snow Mode
 option.SNOW_MODE.comment=Adds snow on top of terrain. §c[-]§r Can look wrong in some situations. §e[*]§r PBR must be enabled.
 
+option.NETHER_REFRACT=Nether Refraction
+option.NETHER_REFRACT.comment=Adds heat refraction to the nether. §e[*]§r Intense refraction can cause artifacts.
+value.NETHER_REFRACT.0=§cOFF
+value.NETHER_REFRACT.1=Subtle
+value.NETHER_REFRACT.2=Normal
+value.NETHER_REFRACT.3=Intense
+
 option.GLINT_BRIGHTNESS=Enchantment Glint Brightness
 option.GLINT_BRIGHTNESS.comment=Adjusts the intensity of enchantment glint on enchanted items.
 
@@ -344,6 +351,9 @@ option.WAVING_SPEED.comment=Adjusts the waving speed of waving stuff.
 
 option.WAVING_INTENSITY=Waving Intensity
 option.WAVING_INTENSITY.comment=Adjusts the waving intensity of waving stuff.
+
+option.RAIN_WAVING_INTENSITY=Rain Waving Intensity Mult
+option.RAIN_WAVING_INTENSITY.comment=Multiplies the waving intensity during rain.
 
 option.NETHER_FOG=Nether Fog
 option.NETHER_FOG.comment=Enables border fog in The Nether dimension. §e[*]§r "Border Fog" must be enabled. §e[*]§r Affected by the "Border Fog Distance" slider.
@@ -458,6 +468,9 @@ option.NORMAL_MULTIPLIER.comment=Adjusts how intense normals are going to be. Lo
 option.GENERATED_NORMALS=Auto-Generated Normals
 option.GENERATED_NORMALS.comment=Generates subtle normal maps out of the difference in texture colors. §c[-]§r Might cause issues with some resource packs.
 
+option.SAFE_GENERATED_NORMALS=RP Compatible Generation
+option.SAFE_GENERATED_NORMALS.comment=Changes the calculation of Auto-Generated Normals and Noise Coated Textures to work better with resource packs that have textures with different resolutions. §c[-]§r Enabling this will make non-cube blocks have incorrect generated normals.
+
 option.DOF=Type
 value.DOF.1=Depth Of Field
 value.DOF.2=Distance Blur
@@ -472,7 +485,7 @@ option.RAIN_BLUR_MULT=Rain D. Blur Multiplier
 option.RAIN_BLUR_MULT.comment=Multiplies the distance blur during rain in the overworld. §e[*]§r "Distance Blur" must be enabled.
 
 option.UNDERWATER_BLUR_MULT=Underwater D. Blur Multiplier
-option.UNDERWATER_BLUR_MULT.comment=Multiplies the distance blur in the underwater. §e[*]§r "Distance Blur" must be enabled.
+option.UNDERWATER_BLUR_MULT.comment=Multiplies the distance blur underwater. §e[*]§r "Distance Blur" must be enabled.
 
 option.NETHER_BLUR=Force Distance Blur in Nether
 option.NETHER_BLUR.comment=Enables Distance Blur in the nether regardless of any options in this menu. §e[*]§r You might want to disable this if you are going to use Depth Of Field.
@@ -484,7 +497,7 @@ option.ANAMORPHIC_BLUR=Anamorphic Blur
 option.ANAMORPHIC_BLUR.comment=Stretches the blur vertically. §e[*]§r DOF/Distance Blur/Nether Blur must be enabled. §c[-]§r Might make the blur slightly less accurate.
 
 option.FOV_SCALED_BLUR=FOV Scaled Blur
-option.FOV_SCALED_BLUR.comment=Adjusts the blur depending on your field of view, or zoom. Disable this option if you don't want excessive bloom when zooming
+option.FOV_SCALED_BLUR.comment=Adjusts the blur depending on your field of view, or zoom. §e[*]§r Disable this option if you don't want excessive bloom when zooming.
 
 option.CHROMATIC_BLUR=Chromatic Blur
 option.CHROMATIC_BLUR.comment=Applies chromatic aberration to the blurry areas. §e[*]§r It's recommended to disable the Chromatic Aberration option when this is enabled.
@@ -496,11 +509,14 @@ option.MOTION_BLUR_STRENGTH=Motion Blur Strength
 option.MOTION_BLUR_STRENGTH.comment=Adjusts motion blur intensity.
 
 option.BLOOM=Bloom
-option.BLOOM.comment=Allows bright things to glow.
+option.BLOOM.comment=Allows bright things to glow. §a[+]§r This effect benefits from TAA.
 
 option.BLOOM_STRENGTH=Bloom Strength
 option.BLOOM_STRENGTH.comment=Adjusts bloom intensity.
 value.BLOOM_STRENGTH.100=§bBSL
+
+option.UNDERWATER_BLOOM_STRENGTH=Underwater Bloom Strength
+option.UNDERWATER_BLOOM_STRENGTH.comment=Adjusts the bloom intensity when the player is underwater.
 
 option.NETHER_BLOOM_STRENGTH=Nether Bloom Strength
 option.NETHER_BLOOM_STRENGTH.comment=Adjusts the bloom intensity in The Nether dimension.
@@ -532,7 +548,10 @@ value.AUTO_EXPOSURE.2=Intense
 option.AUTO_EXPOSURE.comment=Enables automatic adjustment to overall brightness.
 
 option.VIGNETTE=Vignette
-option.Vignette.comment=Fades the edge of the screen to black. §e[*]§r Disable for 360 imaging.
+option.VIGNETTE.comment=Fades the edge of the screen to black (Classic) or white. §e[*]§r Disable for 360 imaging.
+value.VIGNETTE.0=OFF
+value.VIGNETTE.1=Classic
+value.VIGNETTE.2=White
 
 option.VIGNETTE_STRENGTH=Vignette Strength
 option.VIGNETTE_STRENGTH.comment=Adjusts vignette intensity.
@@ -624,11 +643,11 @@ option.SHADOW_FILTER.comment=Enables shadow filtering. §a[+]§r This effect ben
 option.sunPathRotation=Sun/Moon Path Rotation
 option.sunPathRotation.comment=Adjusts sun/moon angle.
 
-option.SHADOW_SUBSURFACE=Subsurface Scattering
-option.SHADOW_SUBSURFACE.comment=Allows light to penetrate and scatter through things.
+option.SHADOW_SUBSURFACE=Subsurface Scatter Quality
+option.SHADOW_SUBSURFACE.comment=Allows light to penetrate and scatter through things like foliage and leaves. §e[*]§r "Ultra" mode smoothens the noise on subsurface scattered blocks, but only works when TAA is enabled. §c[-]§r Performance impact.
 value.SHADOW_SUBSURFACE.0=§cOFF
-value.SHADOW_SUBSURFACE.1=Only Plants
-value.SHADOW_SUBSURFACE.2=Full
+value.SHADOW_SUBSURFACE.2=Medium
+value.SHADOW_SUBSURFACE.3=Ultra
 
 option.SCATTERING_FOLIAGE=Scattering Multiplier - Foliage
 option.SCATTERING_FOLIAGE.comment=Adjusts how intense subsurface scattering is going to be for foliage. Higher values make foliage brighter under sunlight.
@@ -849,13 +868,16 @@ option.STAR_BRIGHTNESS=Star Brightness
 option.STAR_BRIGHTNESS.comment=Adjusts the brightness of stars.
 
 option.ROUND_SUN_MOON=Shader Sun/Moon
-option.ROUND_SUN_MOON.comment=Enables round sun & moon. §e[*]§r Enable "Vanilla Sun/Moon/Overlay" option as well if you want to use vanilla sun/moon.
+option.ROUND_SUN_MOON.comment=Enables round sun & moon. §e[*]§r Disable this option and enable "Vanilla Sun/Moon/Overlay" if you only want the vanilla sun/moon
 
 option.SKYBOX_BRIGHTNESS=Vanilla Skybox Brightness
 option.SKYBOX_BRIGHTNESS.comment=Adjusts skybox brightness.
 
 option.VANILLA_SKYBOX=Vanilla Sun/Moon/Overlay
-option.VANILLA_SKYBOX.comment=Enables vanilla sky overlays which include square sun/moon and custom resource pack skies. §e[*]§r Disable "Shader Sun/Moon" option as well if you want to use vanilla sun/moon. §c[-]§r Changing this can cause problems with some mods.
+option.VANILLA_SKYBOX.comment=Enables vanilla sky overlays which include square sun/moon and custom resource pack skies. §e[*]§r Disable "Shader Sun/Moon" option if you want to use vanilla sun/moon. §c[-]§r Changing this can cause problems with some mods.
+
+option.SUN_MOON_HORIZON=Sun/Moon Horizon
+option.SUN_MOON_HORIZON.comment=Makes the sun/moon disappear below the horizon level.
 
 option.SKY_DAY=Morning/Evening - Intensity
 option.SKY_DAY.comment=Adjusts the intensity of the sky during morning and evening.
@@ -923,7 +945,7 @@ option.WATER_DISPLACEMENT=Water Displacement
 option.WATER_DISPLACEMENT.comment=Enables waving water position.
 
 option.WATER_PARALLAX=Water Parallax
-option.WATER_PARALLAX.comment=Enables water displacement which helps the water normals to look more like actual waves.
+option.WATER_PARALLAX.comment=Uses the water normals to calculate fake water displacement which helps the water normals to look more like actual waves.
 
 option.WATER_BUMP=Bumpiness
 option.WATER_BUMP.comment=Adjusts the intensity of water normals. §e[*]§r This value is internally divided by 5 if the water type is changed.
@@ -1050,8 +1072,8 @@ option.ALTERNATIVE_COMMAND_BLOCK.comment=Adds extra color and emission to comman
 option.HAND_BLOOM_REDUCTION=Handheld Bloom Reduction
 option.HAND_BLOOM_REDUCTION.comment=Reduces the amount of glow on items/blocks that are in player's hands.
 
-option.ENTITY_NORMAL_FIX=1.15 Entity Normals Fix
-option.ENTITY_NORMAL_FIX.comment=Disables normal map effects on entities in Mc 1.15, because Optifine doesn't support them.
+option.ENTITY_NORMAL_FIX=Entity Normals Fix
+option.ENTITY_NORMAL_FIX.comment=Disables normal map effects on entities in older Minecraft versions because Optifine/Iris doesn't support them.
 
 option.FOG1=Border Fog
 option.FOG1.comment=Enables fog that hides unloaded areas like the one in vanilla Minecraft.
