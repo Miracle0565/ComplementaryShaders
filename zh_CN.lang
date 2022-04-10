@@ -1,6 +1,6 @@
 #shaders/lang/zh_CN.lang
 #本汉化文档以 CC BY-NC-SA 4.0 协议进行许可.
-#汉化文档版本号 4.4b
+#汉化文档版本号 4.4c
 #Profiles
 profile.POTATO=§4极低
 profile.LOW=§6低
@@ -811,10 +811,10 @@ option.SUN_GLARE=太阳眩光
 option.SUN_GLARE.comment=启用太阳的眩光. 
 
 option.SUN_GLARE_STRENGTH=太阳眩光强度
-option.SUN_GLARE_STRENGTH.comment=调整太阳周围的额外天空亮度.
+option.SUN_GLARE_STRENGTH.comment=调整太阳周围额外的天空亮度.
 
 option.CLOUDS=基于光影的云
-option.CLOUDS.comment=启用基于光影的云. §e[*]§r 当该选项被设为关时，视频设置中云的选项会决定原版的云是否出现.. §a[+]§r 该选项得益于 TAA. §c[-]§r 禁用此功能可能会导致某些模组出现问题.
+option.CLOUDS.comment=启用基于光影的云. §e[*]§r 当该选项被设为关时，“视频设置”中“云”的选项会决定原版的云是否出现. §a[+]§r 该选项得益于 TAA. §c[-]§r 禁用此项可能会导致某些模组出现问题.
 
 option.ENDER_NEBULA=末地星云
 option.ENDER_NEBULA.comment=在末地群系中启用星云.
