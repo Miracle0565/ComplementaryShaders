@@ -988,9 +988,6 @@ option.EMISSIVE_RECOLOR.comment=Enable this if you find lava too bright
 option.END_PORTAL_REWORK=End Portal Fix
 option.END_PORTAL_REWORK.comment=Re-creates the end portals to fix the missing effect with shaders. Disabling this will make the end portals and gateways broken (like most other shaders).
 
-option.LIGHTSHAFT_WATER_CAUSTICS=Water Light Shaft Caustics
-option.LIGHTSHAFT_WATER_CAUSTICS.comment=Uses caustics to make underwater light shafts nicer.
-
 option.SMOKEY_WATER_LIGHTSHAFTS=Smoke-y Water Light Shafts
 option.SMOKEY_WATER_LIGHTSHAFTS.comment=Adds volumetric smoke to the light shafts when the player is underwater.
 
