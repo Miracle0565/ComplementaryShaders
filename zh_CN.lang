@@ -1,6 +1,6 @@
 #shaders/lang/zh_CN.lang
 #本汉化文档以 CC BY-NC-SA 4.0 协议进行许可.
-#汉化文档版本号 4.4c
+#汉化文档版本号 4.5
 #Profiles
 profile.POTATO=§4极低
 profile.LOW=§6低
@@ -13,7 +13,7 @@ profile.comment=§4极低:§r 禁用阴影和水面反射. §6低:§r 降低阴�
 
 #Screens
 screen.ABOUT=Complementary Shaders by EminGT
-screen.ABOUT.comment=主要魔改自“BSL Shaders”. 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于 4.4 版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
+screen.ABOUT.comment=主要魔改自“BSL Shaders”. 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于 4.5 版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
 
 screen.WORLD=世界
 screen.WORLD.comment=应用于世界的效果.
@@ -988,9 +988,6 @@ option.EMISSIVE_RECOLOR.comment=如果你觉得熔岩太亮了，就启用这个
 
 option.END_PORTAL_REWORK=末地传送门方块修复
 option.END_PORTAL_REWORK.comment=重建了末地传送门，修复了丢失的效果. 关掉这个选项会导致末地传送门渲染出现问题(就像其他大多数的光影一样).
-
-option.LIGHTSHAFT_WATER_CAUSTICS=水体散焦线
-option.LIGHTSHAFT_WATER_CAUSTICS.comment=使用焦散使水下光束看起来更好康.
 
 option.SMOKEY_WATER_LIGHTSHAFTS=水下体积烟雾
 option.SMOKEY_WATER_LIGHTSHAFTS.comment=当玩家在水下时，向光束添加体积烟雾.
