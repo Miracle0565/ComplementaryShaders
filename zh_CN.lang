@@ -1,6 +1,6 @@
 #shaders/lang/zh_CN.lang
 #本汉化文档以 CC BY-NC-SA 4.0 协议进行许可.
-#汉化文档版本号 4.5
+#汉化文档版本号 4.6
 #Profiles
 profile.POTATO=§4极低
 profile.LOW=§6低
@@ -13,7 +13,7 @@ profile.comment=§4极低:§r 禁用阴影和水面反射. §6低:§r 降低阴�
 
 #Screens
 screen.ABOUT=Complementary Shaders by EminGT
-screen.ABOUT.comment=主要魔改自“BSL Shaders”. 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于 4.5 版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
+screen.ABOUT.comment=主要魔改自“BSL Shaders”. 非常感谢Capt Tatsu让我发布这个光影. 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于 4.6 版本. 汉化发布地址: https://www.mcbbs.net/thread-1262472-1-1.html.
 
 screen.WORLD=世界
 screen.WORLD.comment=应用于世界的效果.
@@ -145,16 +145,16 @@ value.RP_SUPPORT.3=§dlabPBR (需要资源包)
 value.RP_SUPPORT.4=§dSEUS PBR (需要资源包)
 
 option.AO_QUALITY=SSAO 质量
-option.AO_QUALITY.comment=调整屏幕空间环境光遮蔽（SSAO）的质量. §e[*]§r 当TAA设为关时，“低”会强制设置为“中”.
-value.AO_QUALITY.1=低 (Half Res)
-value.AO_QUALITY.2=中 (4 Samples)
-value.AO_QUALITY.3=高 (12 Samples)
+option.AO_QUALITY.comment=调整屏幕空间环境光遮蔽（SSAO）的质量.
+value.AO_QUALITY.1=中
+value.AO_QUALITY.2=高
+value.AO_QUALITY.3=超高
 
 option.AO=SSAO
 option.AO.comment=屏幕空间环境光遮蔽（SSAO）.在表面接触或相交的地方添加柔和的阴影. 还能提高反射精度 (别问是怎么增加的).
 
-option.AO_STRENGTH=SSAO 强度
-option.AO_STRENGTH.comment=调整环境光遮蔽的强度.
+option.AO_STRENGTH_NEW=SSAO 强度
+option.AO_STRENGTH_NEW.comment=调整环境光遮蔽的强度.
 
 option.WATER_CAUSTICS=水下散焦线
 option.WATER_CAUSTICS.comment=当玩家在水下时，启用散焦光束.
@@ -325,7 +325,7 @@ option.RANDOM_BLOCKLIGHT=随机彩色照明
 option.RANDOM_BLOCKLIGHT.comment=使用世界坐标为方块照明选择随机颜色.
 
 option.COLORED_LIGHT_DEFINE=场景感知化颜色照明
-option.COLORED_LIGHT_DEFINE.comment=使用屏幕上存在的或玩家手中的光源信息改变方块光颜色. §e[*]§r PBR必须被设为开. §e[*]§r 该选项在兼容模式下被禁用. §c[-]§r 对性能有一定影响. §c[-]§r 只在高清修复G7 (Optifine G7) 以上版本中工作. §c[-]§r 可能在苹果系设备上无法正常工作.
+option.COLORED_LIGHT_DEFINE.comment=使用屏幕上存在的或玩家手中的光源信息改变方块光颜色. §e[*]§r PBR必须被设为开. §e[*]§r 该选项在兼容模式下被禁用. §c[-]§r 对性能有一定影响. §c[-]§r 在陈旧的 Optifine/Iris 版本中无法正常工作. §c[-]§r 可能在苹果系设备上无法正常工作.
 
 option.OVERDRAW=夸张效果
 option.OVERDRAW.comment=用于为最终图像获得更多屏幕空间反射信息. §e[*]§r 将光影菜单（shaders menu）中的渲染质量（render quality）设为 1.5x . §e[*]§r 像这样来扩大视场角（Field Of View，FOV）:中-> 93；80 -> 103；90+ -> 广角.
@@ -472,12 +472,17 @@ option.GENERATED_NORMALS.comment=通过原本贴图颜色的不同自动生成�
 option.SAFE_GENERATED_NORMALS=资源包兼容性调整
 option.SAFE_GENERATED_NORMALS.comment=更改自动生成法线和噪点涂层纹理的计算，从而更好地处理具有不同分辨率纹理的资源包. §c[-]§r 启用此项将使非立方体块生成不正确的法线.
 
-option.DOF=类型
+option.DOF=模糊类型
 value.DOF.1=景深
 value.DOF.2=距离模糊
 option.DOF.comment=景深: 将玩家未看向的物体模糊显示. 距离模糊效果: 模糊显示远处物体来模拟迷雾对光线的散射.
+
 option.DOF_STRENGTH=模糊强度
 option.DOF_STRENGTH.comment=调整景深和距离迷糊效果的强度.
+
+option.DOF_FOCUS=景深焦点
+option.DOF_FOCUS.comment=确定景深的焦点位置. 该距离的单位是米/区块。 §e[*]§r “模糊类型”必须设置为“景深”.
+value.DOF_FOCUS.0=自动
 
 option.DOF_IS_ON=启用景深和距离模糊
 option.DOF_IS_ON.comment=如果你想使用景深或距离模糊，必须先启用此选项.
@@ -942,6 +947,9 @@ value.WATER_TYPE.0=逼真型
 value.WATER_TYPE.1=原版型
 value.WATER_TYPE.2=RTX 型
 
+option.WATER_WAVES=水体波动
+option.WATER_WAVES.comment=启用水体正常波动.
+
 option.WATER_DISPLACEMENT=水体置换
 option.WATER_DISPLACEMENT.comment=启用水体置换.
 
@@ -949,7 +957,7 @@ option.WATER_PARALLAX=水体视差
 option.WATER_PARALLAX.comment=使用水法线来计算虚水体置换，这有助于使水法线看起来更像真实的波浪.
 
 option.WATER_BUMP=水面起伏
-option.WATER_BUMP.comment=调整水法线的密度. §e[*]§r 如果改变水体类型，则该值会被自动除以 5.
+option.WATER_BUMP.comment=调整水法线的密度.
 
 option.WATER_NOISE_1=噪波 1 系数
 option.WATER_NOISE_1.comment=调整用于水法线的噪波 1 的强度.
@@ -1032,7 +1040,7 @@ option.EMISSIVE_NETHER_STEMS=下界菌柄发光
 option.EMISSIVE_NETHER_STEMS.comment=为诡异木板、绯红木板和其对应菌核添加了微弱的发光效果.
 
 option.EMISSIVE_LICHEN=发光地衣发光
-option.EMISSIVE_LICHEN.comment=为发光地衣添加发光效果. 情景式: 发光地衣只在无天空光/方块光时发光. 总是: 发光地衣总是发光.
+option.EMISSIVE_LICHEN.comment=为发光地衣添加发光效果. 情景式: 发光地衣只在无天空光照时发光. 总是: 发光地衣总是发光.
 value.EMISSIVE_LICHEN.0=§c关
 value.EMISSIVE_LICHEN.1=情景式
 value.EMISSIVE_LICHEN.2=总是
