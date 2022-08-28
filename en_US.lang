@@ -144,16 +144,16 @@ value.RP_SUPPORT.3=§dlabPBR (RP Required)
 value.RP_SUPPORT.4=§dSEUS PBR (RP Required)
 
 option.AO_QUALITY=SSAO Quality
-option.AO_QUALITY.comment=Adjusts screen space ambient occlusion quality. §e[*]§r Low quality is internally switched to Medium if TAA is off.
-value.AO_QUALITY.1=Low (Half Res)
-value.AO_QUALITY.2=Medium (4 Samples)
-value.AO_QUALITY.3=High (12 Samples)
+option.AO_QUALITY.comment=Adjusts the quality of screen space ambient occlusion.
+value.AO_QUALITY.1=Medium
+value.AO_QUALITY.2=High
+value.AO_QUALITY.3=Ultra
 
 option.AO=SSAO
 option.AO.comment=Screen Space Ambient Occlusion. Adds soft shadow-y darkness around surface contact or intersection. Also increases reflection accuracy (don't ask how).
 
-option.AO_STRENGTH=SSAO Strength
-option.AO_STRENGTH.comment=Adjusts ambient occlusion strength.
+option.AO_STRENGTH_NEW=SSAO Strength
+option.AO_STRENGTH_NEW.comment=Adjusts ambient occlusion strength.
 
 option.WATER_CAUSTICS=Underwater Caustics
 option.WATER_CAUSTICS.comment=Enables caustics and caustic light shafts that appear when the player is underwater.
@@ -324,9 +324,9 @@ option.RANDOM_BLOCKLIGHT=Random Colored Lighting
 option.RANDOM_BLOCKLIGHT.comment=Picks random colors for block lighting using world coordinates.
 
 option.COLORED_LIGHT_DEFINE=Scene-Aware Colored Lighting
-option.COLORED_LIGHT_DEFINE.comment=Changes the blocklight color using light source data that is/was present on the screen, or the player's hand. §e[*]§r PBR must be enabled. §e[*]§r Disabled on Compatibility Mode. §c[-]§r Performance impact. §c[-]§r Only works with Optifine version G7 and above. §c[-]§r May not work on Apple devices.
+option.COLORED_LIGHT_DEFINE.comment=Changes the blocklight color using light source data that is/was present on the screen, or the player's hand. §e[*]§r PBR must be enabled. §e[*]§r Disabled on Compatibility Mode. §c[-]§r Performance impact. §c[-]§r Doesn't work in older Optifine/Iris versions. §c[-]§r May not work on Apple devices.
 
-option.OVERDRAW=Overdraw
+option.OVERDRAW=Overscan
 option.OVERDRAW.comment=Used to get more screenspace reflection information for the final image. §e[*]§r Set your render quality to 1.5x in the shaders menu. §e[*]§r Increase your Field Of View like this:. Normal -> 93. 80 -> 103. 90+ -> Quake Pro.
 
 option.WAVING_FOLIAGE=Waving Foliage
@@ -471,12 +471,17 @@ option.GENERATED_NORMALS.comment=Generates subtle normal maps out of the differe
 option.SAFE_GENERATED_NORMALS=RP Compatible Generation
 option.SAFE_GENERATED_NORMALS.comment=Changes the calculation of Auto-Generated Normals and Noise Coated Textures to work better with resource packs that have textures with different resolutions. §c[-]§r Enabling this will make non-cube blocks have incorrect generated normals.
 
-option.DOF=Type
+option.DOF=Blur Type
 value.DOF.1=Depth Of Field
 value.DOF.2=Distance Blur
 option.DOF.comment=Depth Of Field: Blurs the objects that the player isn't looking at to simulate focusing. Distance Blur: Blurs distant objects to simulate fog scattering the light.
+
 option.DOF_STRENGTH=Blur Strength
 option.DOF_STRENGTH.comment=Adjusts the strength of the dof / distance blur.
+
+option.DOF_FOCUS=Depth Of Field Focus
+option.DOF_FOCUS.comment=Determines the focus of Depth Of Field. The distance is in meters/blocks. §e[*]§r Blur Type must be set to "Depth Of Field".
+value.DOF_FOCUS.0=Auto
 
 option.DOF_IS_ON=Enable DOF / Distance Blur
 option.DOF_IS_ON.comment=Turn this on first if you are going to use DOF or Distance Blur.
@@ -941,6 +946,9 @@ value.WATER_TYPE.0=Realistic-ish
 value.WATER_TYPE.1=Vanilla-ish
 value.WATER_TYPE.2=RTX-ish
 
+option.WATER_WAVES=Water Waves
+option.WATER_WAVES.comment=Enables water normal waves.
+
 option.WATER_DISPLACEMENT=Water Displacement
 option.WATER_DISPLACEMENT.comment=Enables waving water position.
 
@@ -948,7 +956,7 @@ option.WATER_PARALLAX=Water Parallax
 option.WATER_PARALLAX.comment=Uses the water normals to calculate fake water displacement which helps the water normals to look more like actual waves.
 
 option.WATER_BUMP=Bumpiness
-option.WATER_BUMP.comment=Adjusts the intensity of water normals. §e[*]§r This value is internally divided by 5 if the water type is changed.
+option.WATER_BUMP.comment=Adjusts the intensity of water normals.
 
 option.WATER_NOISE_1=Noise 1 Multiplier
 option.WATER_NOISE_1.comment=Adjusts the intensity of noise 1 used for water normals.
@@ -1031,7 +1039,7 @@ option.EMISSIVE_NETHER_STEMS=Emissive Nether Stems
 option.EMISSIVE_NETHER_STEMS.comment=Adds subtle glow to crimson/warped stem and hyphae.
 
 option.EMISSIVE_LICHEN=Emissive Glow Lichen
-option.EMISSIVE_LICHEN.comment=Adds glow to glow lichen. Situational: Glow lichen only glow when there is no blocklight or skylight. Always: Glow lichen always glow.
+option.EMISSIVE_LICHEN.comment=Adds glow to glow lichen. Situational: Glow lichen only glow when there is no skylight. Always: Glow lichen always glow.
 value.EMISSIVE_LICHEN.0=§cOFF
 value.EMISSIVE_LICHEN.1=Situational
 value.EMISSIVE_LICHEN.2=Always
