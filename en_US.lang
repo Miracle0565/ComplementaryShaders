@@ -206,14 +206,17 @@ option.LIGHT_SHAFT_UNDERWATER_MULTIPLIER.comment=Adjusts light shaft strength wh
 option.LIGHT_SHAFT_THE_END_MULTIPLIER=Light Shaft The End Multiplier
 option.LIGHT_SHAFT_THE_END_MULTIPLIER.comment=Adjusts light shaft strength in The End dimension.
 
-option.REFLECTION=Water/Translucent Reflections
-option.REFLECTION.comment=Enables screen space reflection. §e[*]§r This toggle only affects water and translucent reflection, specular reflection won't be affected.
+option.REFLECTION=Water/Trans Reflections
+option.REFLECTION.comment=Enables screen space reflection for water and translucents. §e[*]§r This toggle does not affect specular reflections on opaque materials.
 
 option.REFLECTION_TRANSLUCENT=Translucent Reflections
-option.REFLECTION_TRANSLUCENT.comment=Allows reflections to be rendered on translucent surfaces like stained glasses.
+option.REFLECTION_TRANSLUCENT.comment=Allows reflections to be rendered on translucent surfaces like stained glass.
 
-option.WATER_TRANSLUCENT_SKY_REF=Water/Translucent Sky Ref.
+option.WATER_TRANSLUCENT_SKY_REF=Water/Trans Sky Reflections
 option.WATER_TRANSLUCENT_SKY_REF.comment=Allows water and translucents to render sky reflections.
+
+option.WATER_TRANSLUCENT_CLOUD_REF=Water/Trans Cloud Reflections
+option.WATER_TRANSLUCENT_CLOUD_REF.comment=Allows water and translucents to render cloud and aurora reflections.
 
 option.EMISSIVE_MULTIPLIER=Emissiveness Multiplier
 option.EMISSIVE_MULTIPLIER.comment=Adjusts the brightness of emissives that are controlled by specular maps of resource packs.
@@ -269,8 +272,8 @@ option.OVERLAY_FIX.comment=Enables support for a bunch of mod overlays.
 option.CAVE_SKY_FIX=Cave Sky/Void Fix
 option.CAVE_SKY_FIX.comment=Fixes the sky being visible in caves or the void by making it situationally black.
 
-option.MIN_LIGHT_EVERYWHERE=Force Minimum Light
-option.MIN_LIGHT_EVERYWHERE.comment=Forces the minimum light to work even when the player is outdoors.
+option.MIN_LIGHT_EVERYWHERE=Force Cave Lighting
+option.MIN_LIGHT_EVERYWHERE.comment=Forces the cave lighting to work even when the player is outdoors.
 
 option.GBUFFER_CODING=Color Coded Gbuffers
 option.GBUFFER_CODING.comment=Color codes different shader programs for debugging. §1terrain §0skybasic §eskytextured §bwater §8weather §4spidereyes §6textured §2hand §centities §7damagedblock §fclouds §5block §3beaconbeam §abasic §darmor_glint
@@ -449,6 +452,9 @@ option.SELF_SHADOW.comment=Allows a surface to cast shadow to itself using heigh
 
 option.SELF_SHADOW_ANGLE=Self Shadowing Angle
 option.SELF_SHADOW_ANGLE.comment=Adjusts the self shadowing angle, higher value allows the shadow to travel further. §e[*]§r Only for labPBR or SEUS PBR resource packs.
+
+option.PARALLAX_SLOPE_NORMALS=Parallax Slope Normals
+option.PARALLAX_SLOPE_NORMALS.comment=Generates proper normals for the slopes between parallax pixels. §e[*]§r Only for labPBR or SEUS PBR resource packs. §e[*]§r Requires Parallax Occlusion Mapping to be enabled.
 
 option.PARALLAX_QUALITY=Parallax Quality
 option.PARALLAX_QUALITY.comment=Adjusts the quality of parallax occlusion mapping and self shadows. §e[*]§r Only for labPBR or SEUS PBR resource packs.
@@ -1153,8 +1159,8 @@ value.WORLD_TIME_ANIMATION.2=§cFull
 option.ANIMATION_SPEED=Animation Speed
 option.ANIMATION_SPEED.comment=Adjusts animation speed.
 
-option.MIN_LIGHT=Minimum Light
-option.MIN_LIGHT.comment=Changes the amount of light in the very dark areas. §e[*]§r This is also affected by the Brightness slider in Video Settings.
+option.MIN_LIGHT=Cave Lighting
+option.MIN_LIGHT.comment=Changes the amount of light in very dark areas. §e[*]§r This is also affected by the Brightness slider in Video Settings.
 
 option.ENTITY_EFFECT=Entity Hit Effect
 option.ENTITY_EFFECT.comment=Controls the red glow on entities that appear when they take damage. Also affects creeper blowing animation.

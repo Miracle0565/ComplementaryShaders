@@ -1,6 +1,6 @@
 #shaders/lang/zh_CN.lang
 #本汉化文档以 CC BY-NC-SA 4.0 协议进行许可.
-#汉化文档版本号 4.6b
+#汉化文档版本号 4.7a
 #Profiles
 profile.POTATO=§4极低
 profile.LOW=§6低
@@ -13,7 +13,7 @@ profile.comment=§4极低：§r 禁用阴影和水面反射。 §6低：§r 降�
 
 #Screens
 screen.ABOUT=Complementary Shaders by EminGT
-screen.ABOUT.comment=主要魔改自“BSL Shaders”，非常感谢 Capt Tatsu 让我发布这个光影。 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于 4.6 版本；汉化发布地址：https://www.mcbbs.net/thread-1262472-1-1.html
+screen.ABOUT.comment=主要魔改自“BSL Shaders”，非常感谢 Capt Tatsu 让我发布这个光影。 译注：简体中文由 MCBBS 隐居小树、Wudji 翻译, 该版本汉化适用于 4.7 pre1 版本；汉化发布地址：https://www.mcbbs.net/thread-1262472-1-1.html
 
 screen.WORLD=世界
 screen.WORLD.comment=应用于世界的效果。
@@ -207,14 +207,17 @@ option.LIGHT_SHAFT_UNDERWATER_MULTIPLIER.comment=调整水下光束的强度。
 option.LIGHT_SHAFT_THE_END_MULTIPLIER=光束倍率（末地）
 option.LIGHT_SHAFT_THE_END_MULTIPLIER.comment=调整末地维度光束的强度。
 
-option.REFLECTION=水面和透明反射
-option.REFLECTION.comment=启用屏幕空间反射。 §e[*]§r 该选项只会影响水面或透明物体表面的反射，高光反射不受影响。
+option.REFLECTION=水面和透明物体的反射
+option.REFLECTION.comment=启用对水面和透明物体的屏幕空间反射。 §e[*]§r 该选项不会影响非透明物体上的镜面反射。
 
 option.REFLECTION_TRANSLUCENT=透明反射
 option.REFLECTION_TRANSLUCENT.comment=允许在透明物体（如染色玻璃）的表面上渲染反射效果。
 
-option.WATER_TRANSLUCENT_SKY_REF=水面和透明天空反射
+option.WATER_TRANSLUCENT_SKY_REF=水面和透明物体的天空反射
 option.WATER_TRANSLUCENT_SKY_REF.comment=允许水面和透明物体的表面渲染来自天空的反射。
+
+option.WATER_TRANSLUCENT_CLOUD_REF=水面和透明物体的云反射
+option.WATER_TRANSLUCENT_CLOUD_REF.comment=允许水面和透明物体的表面渲染来自云朵和星云的反射。
 
 option.EMISSIVE_MULTIPLIER=自发光系数
 option.EMISSIVE_MULTIPLIER.comment=调整由资源包高光贴图控制的自发光物品的亮度。
@@ -270,8 +273,8 @@ option.OVERLAY_FIX.comment=开启对一批模组显示的支持。
 option.CAVE_SKY_FIX=洞穴天空和虚空修正
 option.CAVE_SKY_FIX.comment=通过对环境着以黑色，修正了天空在洞穴或虚空中可见的情况。
 
-option.MIN_LIGHT_EVERYWHERE=强制最低光量
-option.MIN_LIGHT_EVERYWHERE.comment=即使玩家在户外，也强制使用最低光量。
+option.MIN_LIGHT_EVERYWHERE=强制洞穴照明	
+option.MIN_LIGHT_EVERYWHERE.comment=即使玩家在户外，也强制使用洞穴照明。
 
 option.GBUFFER_CODING=（debug功能）颜色编码几何缓冲
 option.GBUFFER_CODING.comment=（debug功能）用于不同颜色代码着色程序的调试。 §1terrain §0skybasic §eskytextured §bwater §8weather §4spidereyes §6textured §2hand §centities §7damagedblock §fclouds §5block §3beaconbeam §abasic §darmor_glint
@@ -357,7 +360,7 @@ option.RAIN_WAVING_INTENSITY=雨天摇摆幅度系数
 option.RAIN_WAVING_INTENSITY.comment=调整摇摆物体在下雨时的摇摆幅度。
 
 option.NETHER_FOG=下界迷雾
-option.NETHER_FOG.comment=启用下界迷雾。 §e[*]§r "边界迷雾" 必须被设为开。 §e[*]§r 受 "边界迷雾距离" 滑动条的影响。
+option.NETHER_FOG.comment=启用下界迷雾。 §e[*]§r "边界迷雾" 必须被设为开。 §e[*]§r 受 "边界迷雾距离" 滑块的影响。
 
 option.NETHER_SMOKE=下界烟雾
 option.NETHER_SMOKE.comment=为下界迷雾添加类似烟雾的效果。 §e[*]§r “边界迷雾”和“下界迷雾”必须被设为开。 §c[-]§r 略有瑕疵。
@@ -415,7 +418,7 @@ option.DOUBLE_QUALITY_ROUGH_REF=更好的反射质量
 option.DOUBLE_QUALITY_ROUGH_REF.comment=使反射采样率翻倍，这尤其能使粗糙表面看起来更好。 §e[*]§r 必须启用“漫反射”。 §c[-]§r 对性能有一定影响。
 
 option.REFLECTION_RAIN=雨水坑
-option.REFLECTION_RAIN.comment=启用下雨时出现的雨水坑。 §e[*]§r 必须启用 PBR 和“高光反射”。 §c[-]§r 水坑可能在错误的地方出现。 §c[-]§r 可能在 Minecraft 1.16.5 以下不适用。
+option.REFLECTION_RAIN.comment=启用下雨时出现的雨水坑。 §e[*]§r 必须启用 PBR 和“镜面反射”。 §c[-]§r 水坑可能在错误的地方出现。 §c[-]§r 可能在 Minecraft 1.16.5 以下不适用。
 
 option.REFLECTION_RAIN_COVERAGE=雨水坑覆盖范围
 option.REFLECTION_RAIN_COVERAGE.comment=调整下雨时水坑的覆盖率。
@@ -450,6 +453,9 @@ option.SELF_SHADOW.comment=允许表面使用高度贴图向自己投射阴影�
 
 option.SELF_SHADOW_ANGLE=自投影角度
 option.SELF_SHADOW_ANGLE.comment=调整自投影角度, 更大的值会使阴影显示得更远。 §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包。
+
+option.PARALLAX_SLOPE_NORMALS=视差斜面法线
+option.PARALLAX_SLOPE_NORMALS.comment=为视差像素之间的斜面生成适当的法线。 §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包。 §e[*]§r 需启用“视差遮挡贴图”。
 
 option.PARALLAX_QUALITY=视差质量
 option.PARALLAX_QUALITY.comment=调整视差贴图和其阴影的渲染距离。 §e[*]§r 仅支持 labPBR 或 SEUS PBR 资源包。
@@ -995,7 +1001,7 @@ option.EMISSIVE_RECOLOR=熔岩重新着色
 option.EMISSIVE_RECOLOR.comment=如果你觉得熔岩太亮了，就启用这个选项。
 
 option.END_PORTAL_REWORK=末地传送门方块修复
-option.END_PORTAL_REWORK.comment=重建了末地传送门，修复了丢失的效果。 关掉这个选项会导致末地传送门渲染出现问题，就像其他大多数的光影一样。
+option.END_PORTAL_REWORK.comment=重建了末地传送门，修复了丢失的效果。 禁用此项会导致末地传送门与折跃门的渲染出现问题，就像其他大多数的光影一样。
 
 option.SMOKEY_WATER_LIGHTSHAFTS=水下体积烟雾
 option.SMOKEY_WATER_LIGHTSHAFTS.comment=当玩家在水下时，向光束添加体积烟雾。
@@ -1151,8 +1157,8 @@ value.WORLD_TIME_ANIMATION.2=§c全开
 option.ANIMATION_SPEED=动画速度
 option.ANIMATION_SPEED.comment=调整动画速度。
 
-option.MIN_LIGHT=最低亮度
-option.MIN_LIGHT.comment=调整在非常黑暗的区域的亮度值。 §e[*]§r 视频设置里的亮度滑动条也影响该选项。
+option.MIN_LIGHT=洞穴照明
+option.MIN_LIGHT.comment=调整在非常黑暗的区域的亮度值。 §e[*]§r “视频设置”里的“亮度”滑块也影响该选项。
 
 option.ENTITY_EFFECT=实体受击效果
 option.ENTITY_EFFECT.comment=控制当实体受伤时显示的红色发光效果，也影响苦力怕爆炸的动画。
