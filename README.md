@@ -2,10 +2,12 @@
 
 ## 说明
 本仓库主要用于 [Complementary Shaders](https://www.complementary.dev/shaders/) 光影语言包的简体中文翻译工作。
-你可以直接在这里下载汉化后的语言文件 `zh_CN.lang`，或前往 [MCBBS](https://www.mcbbs.net/thread-1262472-1-1.html) 处进行下载。后者是 [Wudji](https://github.com/Wudji) 的发布帖子，包含下载、使用、配置等一系列教程。欢迎提交反馈与贡献。
-下载完成后，将 `zh_CN.lang` 复制进光影包压缩文件夹中的 `/shaders/lang/` 内（即和 `en_US.lang` 处于同一目录下）。
+你可以直接在这里下载汉化后的语言文件 `zh_CN.lang`，或前往 [MCBBS](https://www.mcbbs.net/thread-1262472-1-1.html) 处进行下载。后者是 [Wudji](https://github.com/Wudji) 的发布帖子，包含下载、使用、配置等一系列教程。
 
 语言文件的翻译规范参考了 [Minecraft Mod 简体中文翻译规范与指南](https://github.com/Meow-J/Mod-Translation-Styleguide) ，在此致谢。
+
+欢迎提交[反馈与贡献](https://github.com/Miracle0565/ComplementaryShaders/issues)。
+
 
 ## 其他
 按照协议，本仓库不存储光影包的发布版文件。
