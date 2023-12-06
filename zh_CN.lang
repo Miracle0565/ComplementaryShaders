@@ -1,7 +1,7 @@
 #shaders/lang/zh_cn.lang
 # 简体中文由 MCBBS 隐居小树、Wudji 翻译，根据 CC-BY-SC-SA 4.0 进行许可。
-# 此汉化文件版本适用于 ComplementaryShaders r5.0
-# 汉化文件版本：5.0c
+# 此汉化文件版本适用于 ComplementaryShaders r5.1.x
+# 汉化文件版本：5.1.1a
 # 你可以从 www.mcbbs.net/thread-1262472-1-1.html 下载 Complementary Shader 的最新翻译文件
 #Profiles
 profile.POTATO=§4极低
@@ -87,11 +87,18 @@ screen.END_ATM_MULTS=末地维度
 screen.CLOUD_SETTINGS=云朵设置
 screen.CLOUD_SETTINGS.comment=与云朵有关的设置。
 
+screen.CLOUD_COLOR_SETTINGS=云朵色彩
+screen.CLOUD_COLOR_SETTINGS.comment=更改云朵色彩的设置。
+
 screen.CLOUD_UNBOUND_SETTINGS=“无界风格”云朵设置
 screen.CLOUD_REIMAGINED_SETTINGS="重构风格"云朵设置
 
 screen.FOG_SETTINGS=迷雾设置
 screen.FOG_SETTINGS.comment=与迷雾种类有关的设置。
+
+screen.SUN_MOON_SETTINGS=太阳 / 月亮
+screen.SUN_MOON_SETTINGS.comment=与太阳、月亮相关的设置。
+
 
 screen.NETHER_SETTINGS=下界维度
 screen.NETHER_SETTINGS.comment=与下界维度有关的设置。
@@ -111,8 +118,8 @@ screen.WORLD_BLUR_SETTINGS.comment=与世界模糊有关的选项。
 screen.MATERIAL_SETTINGS=材质设置
 screen.MATERIAL_SETTINGS.comment=与游戏内材质有关的设置。
 
-screen.IPBR_SETTINGS=集成 PBR 设置
-screen.IPBR_SETTINGS.comment=与集成 PBR 有关的设置。
+screen.IPBR_SETTINGS=集成 PBR+ 设置
+screen.IPBR_SETTINGS.comment=与集成 PBR+ 有关的设置。
 
 screen.GLOWING_ORE_SETTINGS=发光矿石
 screen.GLOWING_ORE_SETTINGS.comment=用于调整矿石发光的选项。
@@ -238,7 +245,7 @@ value.ENTITY_SHADOWS.true=§d开
 value.ENTITY_SHADOWS.false=§e关
 
 option.DETAIL_QUALITY=细节质量
-option.DETAIL_QUALITY.comment=调整一些影响性能的项目。. 调整以下项的质量：TAA、光照处理、夜晚星云、下界风暴、末地光束。
+option.DETAIL_QUALITY.comment=调整一些影响性能的项目。. 调整以下项的质量：TAA、光照处理、夜晚星云、下界风暴、末地光束、天空反射光效。
 value.DETAIL_QUALITY.0=§4极低
 value.DETAIL_QUALITY.2=§a中
 value.DETAIL_QUALITY.3=§b高
@@ -256,6 +263,13 @@ value.SSAO_QUALI_DEFINE.0=§c关
 value.SSAO_QUALI_DEFINE.2=§a中
 value.SSAO_QUALI_DEFINE.3=§b高
 value.SSAO_QUALI_DEFINE.5=§d极限
+
+option.ANISOTROPIC_FILTER=纹理过滤
+option.ANISOTROPIC_FILTER.comment=使用各向异性过滤来提高贴图纹理的质量。. §e[*]§r 确保 “视频设置”里的“Mipmap 级别”设置为最大值（4），从而获得最佳效果。
+value.ANISOTROPIC_FILTER.0=§e关
+value.ANISOTROPIC_FILTER.4=§a4x
+value.ANISOTROPIC_FILTER.8=§b8x
+value.ANISOTROPIC_FILTER.16=§d16x
 
 option.SSAO_I=边缘阴影强度（SSAO）
 option.SSAO_I.comment=调整屏幕空间环境光遮蔽（SSAO）为场景边缘添加额外环境光的强度。. §e[*]§r 当 SSAO 在“性能设置”中被禁用时，该选项不会工作。
@@ -316,17 +330,25 @@ option.CLOUD_SPEED_MULT=云朵速度
 option.CLOUD_SPEED_MULT.comment=调整云朵移动的速度。. “与世界时间同步”选项使用与游戏中的世界时间来移动云朵的位置，这使得同一个服务器上的玩家的云朵位置是相同的。. §e[*]§r 该选项只在云朵风格被设定为“无界风格”或“重构风格”时生效。
 value.CLOUD_SPEED_MULT.100=与世界时间同步
 
+option.CLOUD_R=云朵色彩系数 - 红色
+option.CLOUD_G=云朵色彩系数 - 绿色
+option.CLOUD_B=云朵色彩系数 - 蓝色
+
 option.CLOUD_UNBOUND_AMOUNT=云量
 option.CLOUD_UNBOUND_AMOUNT.comment=调整“无界风格”下的云量。
 
 option.CLOUD_UNBOUND_SIZE_MULT=云朵大小
 option.CLOUD_UNBOUND_SIZE_MULT.comment=调整“无界风格”下的云朵大小。. 值越大，云朵越碎。
 
+option.CLOUD_UNBOUND_RAIN_ADD=雨云添加
+option.CLOUD_UNBOUND_RAIN_ADD.comment=调整在下雨和下雪时，云朵增加的量。
+prefix.CLOUD_UNBOUND_RAIN_ADD=+
+
 option.DOUBLE_REIM_CLOUDS=双层重构风格云朵
 option.DOUBLE_REIM_CLOUDS.comment=为“重构风格”的云朵启用双层效果。. §e[*]§r 该选项只在云朵风格被设定为“重构风格”时生效。
 
 option.CLOUD_ALT2=第二云层高度
-option.CLOUD_ALT2.comment=决定第二云层出现的高度。. §e[*]§r 该选项只在"双层重构风格云朵"被设定为"开"时生效。
+option.CLOUD_ALT2.comment=决定第二云层出现的高度。. §e[*]§r 该选项只在“双层重构风格云朵”被设定为“开”时生效。
 
 option.NETHER_STORM=下界风暴
 option.NETHER_STORM.comment=为下界添加了类似烟雾的体积效果。. §c[-]§r 该选项可能影响性能表现。
@@ -339,6 +361,22 @@ option.NETHER_STORM_LOWER_ALT.comment=决定下界风暴的起始点。. 下界�
 
 option.NETHER_STORM_HEIGHT=下界风暴高度
 option.NETHER_STORM_HEIGHT.comment=决定生成的下界风暴的高度。. 降低此值会导致下界风暴在接近“下界风暴起始高度”的高度处生成。
+
+option.NETHER_VIEW_LIMIT=下界视野限制
+option.NETHER_VIEW_LIMIT.comment=调整下界迷雾的最大可见距离。. §c[-]§r 当启用 “下界风暴”时，增加此设置会影响性能。
+value.NETHER_VIEW_LIMIT.96.0=6 区块
+value.NETHER_VIEW_LIMIT.112.0=7 区块
+value.NETHER_VIEW_LIMIT.128.0=8 区块
+value.NETHER_VIEW_LIMIT.160.0=10 区块
+value.NETHER_VIEW_LIMIT.192.0=12 区块
+value.NETHER_VIEW_LIMIT.224.0=14 区块
+value.NETHER_VIEW_LIMIT.256.0=16 区块
+value.NETHER_VIEW_LIMIT.320.0=20 区块
+value.NETHER_VIEW_LIMIT.384.0=24 区块
+value.NETHER_VIEW_LIMIT.512.0=32 区块 §c[-]
+value.NETHER_VIEW_LIMIT.768.0=48 区块 §c[-]
+value.NETHER_VIEW_LIMIT.1024.0=64 区块 §c[-]
+value.NETHER_VIEW_LIMIT.99999.0=无限 §c[-]
 
 option.NETHER_COLOR_MODE=颜色模式
 option.NETHER_COLOR_MODE.comment=调整下界中环境光的处理方法。. 固定：颜色不会随群系而改变。. 基于群系：颜色随群系而改变。. 基于群系 （调整）：颜色随群系而改变，但经过重新平衡，使其更好地适应 Complementary 光影包的视觉方向。
@@ -455,6 +493,9 @@ value.SUN_MOON_STYLE_DEFINE.3=无界风格 - 缩小
 option.SUN_MOON_HORIZON=太阳/月亮地平线限制
 option.SUN_MOON_HORIZON.comment=防止太阳/月亮出现在地平线以下。
 
+option.SUN_MOON_DURING_RAIN=雨天的太阳/月亮
+option.SUN_MOON_DURING_RAIN.comment=决定下雨时是否能看到太阳和月亮。
+
 option.NIGHT_STAR_AMOUNT=夜空星星数量
 option.NIGHT_STAR_AMOUNT.comment=决定夜晚天空的星星数量。
 value.NIGHT_STAR_AMOUNT.2=§a中
@@ -489,6 +530,13 @@ option.NIGHT_NEBULA_I.comment=调整星云的亮度.
 
 option.WEATHER_TEX_OPACITY=天气材质透明度
 option.WEATHER_TEX_OPACITY.comment=调整雨/雪天气材质的透明度。
+
+option.SHADOW_SMOOTHING=平滑阴影
+option.SHADOW_SMOOTHING.comment=调整阴影的锐度。. §c[-]§r 降低该设置会增加阴影闪烁并影响性能。. §e[*]§r 此设置仅在“阴影采样质量”设置为“低“或更高时有效。
+value.SHADOW_SMOOTHING.4=更平滑
+value.SHADOW_SMOOTHING.3=平滑
+value.SHADOW_SMOOTHING.2=锐利 §c[-]
+value.SHADOW_SMOOTHING.1=更锐利 §c[-]
 
 option.PIXEL_SHADOW=像素化阴影
 option.PIXEL_SHADOW.comment=将世界坐标修改为网格来使阴影像素化。. §e[*]§r 该选项不会影响性能。
@@ -536,17 +584,28 @@ value.FXAA.false=§eOFF
 
 option.IMAGE_SHARPENING=图像锐化
 option.IMAGE_SHARPENING.comment=使用过滤器锐化图像。. §c[-]§r 过高的锐化可能导致视觉伪影，例如锯齿、闪烁、噪点以及轻微的亮度改变。
-value.IMAGE_SHARPENING.6=6 §c[-]
-value.IMAGE_SHARPENING.7=7 §c[-]
-value.IMAGE_SHARPENING.8=8 §c[-]
-value.IMAGE_SHARPENING.9=9 §c[-]
-value.IMAGE_SHARPENING.10=10 §c[-]
+value.IMAGE_SHARPENING.0=关
+value.IMAGE_SHARPENING.1=1x
+value.IMAGE_SHARPENING.2=2x
+value.IMAGE_SHARPENING.3=3x
+value.IMAGE_SHARPENING.4=4x
+value.IMAGE_SHARPENING.5=5x
+value.IMAGE_SHARPENING.6=6x §c[-]
+value.IMAGE_SHARPENING.7=7x §c[-]
+value.IMAGE_SHARPENING.8=8x §c[-]
+value.IMAGE_SHARPENING.9=9x §c[-]
+value.IMAGE_SHARPENING.10=10x §c[-]
 
 option.LENSFLARE=镜头光斑
 option.LENSFLARE.comment=启用镜头看向太阳或月亮时的光斑效果。. §c[-]§r 该效果可能严重影响性能表现。
 
 option.LENSFLARE_I=镜头光晕强度
 option.LENSFLARE_I.comment=调整镜头光晕的强度。
+
+option.TAA_MODE=TAA 表现
+option.TAA_MODE.comment=确定时域抗锯齿（TAA）的行为。. 智能 & 精细：TAA 以小量的方式应用于图像，不会导致伪影。. 强烈：提供更好的抗锯齿效果，但会导致额外的模糊和闪烁；在更高的帧率和分辨率下可能是更好的选择。
+value.TAA_MODE.1=智能 & 精细
+value.TAA_MODE.2=强烈 §c[-]
 
 option.MOTION_BLURRING=动态模糊
 option.MOTION_BLURRING.comment=在视角摇晃时添加模糊效果。
@@ -606,8 +665,8 @@ value.HAND_SWAYING.1=细微
 value.HAND_SWAYING.2=普通
 value.HAND_SWAYING.3=强烈
 
-option.LESS_LAVA_FOG=熔岩内部可视性提升
-option.LESS_LAVA_FOG.comment=减少熔岩雾气来提升岩浆内部可视性。
+option.LESS_LAVA_FOG=熔岩/雪内部可视性提升
+option.LESS_LAVA_FOG.comment=减少熔岩内的迷雾和粉雪的雾气，以提高其中的可见性。
 
 option.REDUCE_CLOSE_PARTICLES=近处粒子减少
 option.REDUCE_CLOSE_PARTICLES.comment=通过降低非常近的粒子的不透明度来改善粒子的“观赏性”。. §c[-]§r 并不生效于所有粒子上。. §c[-]§r 可能造成部分模组/插件/数据包的严重的 bug。. §c[-]§r 可能在某些情况下造成闪烁。
@@ -626,12 +685,14 @@ option.COLOR_CODED_PROGRAMS=颜色处理程序 §c[-]§r
 option.COLOR_CODED_PROGRAMS.comment=显示正在被用于渲染的着色器。. §c[-]§r 该选项仅用于开发用途，不应被用于游戏中。. §e[*]§r 你可以在此处找到颜色值：shaders/lib/misc/colorCodedPrograms.glsl。
 
 option.MINIMUM_LIGHT_MODE=洞穴光照
-option.MINIMUM_LIGHT_MODE.comment=为没有天空光照的区域添加额外光照。. §a[+]§r “默认” 选项受视频设置中的“亮度”滑动条影响。
+option.MINIMUM_LIGHT_MODE.comment=为没有天空光照的区域添加额外光照。. §a[+]§r “默认” 选项受视频设置中的“亮度”滑动条影响。. §c[-]§r 大幅更改此设置可能破坏光照平衡。
 value.MINIMUM_LIGHT_MODE.0=非常昏暗
 value.MINIMUM_LIGHT_MODE.1=昏暗
 value.MINIMUM_LIGHT_MODE.2=默认 §a[+]
 value.MINIMUM_LIGHT_MODE.3=明亮
 value.MINIMUM_LIGHT_MODE.4=非常明亮
+value.MINIMUM_LIGHT_MODE.5=超级明亮 §c[-]
+value.MINIMUM_LIGHT_MODE.6=极致明亮 §c[-]
 
 option.AMBIENT_MULT=阴影光照倍率
 option.AMBIENT_MULT.comment=决定阴影中环境光的强度。. §c[-]§r 大幅修改该选项可能导致光照平衡被破坏。
@@ -743,6 +804,10 @@ value.HELD_LIGHTING_MODE.0=关
 value.HELD_LIGHTING_MODE.1=细微
 value.HELD_LIGHTING_MODE.2=默认
 
+option.BLOCKLIGHT_FLICKERING=方块光闪烁
+option.BLOCKLIGHT_FLICKERING.comment=为从方块投射的光线添加闪烁效果。
+value.BLOCKLIGHT_FLICKERING.0=关
+
 option.WAVING_SPEED=晃动速度
 option.WAVING_SPEED.comment=调整晃动效果的速度。
 
@@ -765,6 +830,9 @@ option.WAVING_LEAVES.comment=为树叶添加摇摆效果来模拟风的效果。
 
 option.WAVING_LAVA=熔岩波动纹理
 option.WAVING_LAVA.comment=为岩浆添加持续的波动效果。. §e[*]§r 特别地，熔岩波动效果不受“在封闭区域内禁用方块摇晃”选项的影响。
+
+option.WAVING_LILY_PAD=睡莲摇摆
+option.WAVING_LILY_PAD.comment=为睡莲添加摇摆效果来模拟水波的影响。
 
 option.WAVING_WATER_VERTEX=水面波动纹理
 option.WAVING_WATER_VERTEX.comment=为水面添加波动来模拟风的效果。. §e[*]§r 该选项与“水面波浪强度”无关。
@@ -813,6 +881,9 @@ option.SELECT_OUTLINE_B=选择框 - 蓝
 
 option.MOON_PHASE_INF_LIGHT=基于月相的夜间光照
 option.MOON_PHASE_INF_LIGHT.comment=启用基于不同的月相来调整夜晚光照亮度的效果。
+
+option.MOON_PHASE_INF_ATMOSPHERE=基于月相的夜间大气亮度
+option.MOON_PHASE_INF_ATMOSPHERE.comment=启用基于不同的月相来调整夜晚大气亮度的效果。
 
 option.MOON_PHASE_INF_REFLECTION=基于月相的反射
 option.MOON_PHASE_INF_REFLECTION.comment=启用基于不同的月相来调整月光反射的效果。
