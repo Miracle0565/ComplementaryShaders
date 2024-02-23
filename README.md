@@ -2,7 +2,7 @@
 
 ## 说明
 本仓库主要用于 [Complementary Shaders](https://www.complementary.dev/shaders/) 光影语言包的简体中文翻译工作。
-你可以直接在这里下载汉化后的语言文件 `zh_CN.lang`，或前往 [MCBBS](https://www.mcbbs.net/thread-1262472-1-1.html) 处进行下载。后者是 [Wudji](https://github.com/Wudji) 的发布帖子，包含下载、使用、配置等一系列教程。
+你可以直接在这里下载汉化后的语言文件 `zh_CN.lang`，或前往 [KLPBBS](https://klpbbs.com/thread-130958-1-1.html) 处进行下载。后者是 [Wudji](https://github.com/Wudji) 的发布帖子，包含下载、使用、配置等一系列教程。
 
 语言文件的翻译规范参考了 [Minecraft Mod 简体中文翻译规范与指南](https://github.com/Meow-J/Mod-Translation-Styleguide) ，在此致谢。
 
