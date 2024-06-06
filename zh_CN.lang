@@ -68,7 +68,7 @@ value.SHADER_STYLE.1=§b重构风格
 value.SHADER_STYLE.4=§d无界风格
 
 #Screens
-screen.PERFORMANCE_SETTINGS=主性能设置
+screen.PERFORMANCE_SETTINGS=§e主性能设置§r
 screen.PERFORMANCE_SETTINGS.comment=与性能直接相关的设置, 根据不同光影包预设配置改变。
 
 screen.ATMOSPHERE_SETTINGS=大气迷雾设置
