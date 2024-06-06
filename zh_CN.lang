@@ -1,7 +1,7 @@
 #shaders/lang/zh_cn.lang
 # 简体中文由 MCBBS 隐居小树、Wudji 翻译，根据 CC-BY-SC-SA 4.0 进行许可。
 # 此汉化文件版本适用于 ComplementaryShaders r5.1.x。
-# 汉化文件版本：5.1.1b。
+# 汉化文件版本：5.1.1c。
 # 你可以从 klpbbs.com/thread-130958-1-1.html 下载 Complementary Shader 的最新翻译文件。
 #Profiles
 profile.POTATO=§4极低
@@ -68,7 +68,7 @@ value.SHADER_STYLE.1=§b重构风格
 value.SHADER_STYLE.4=§d无界风格
 
 #Screens
-screen.PERFORMANCE_SETTINGS=主性能设置
+screen.PERFORMANCE_SETTINGS=§e主性能设置§r
 screen.PERFORMANCE_SETTINGS.comment=与性能直接相关的设置, 根据不同光影包预设配置改变。
 
 screen.ATMOSPHERE_SETTINGS=大气迷雾设置
@@ -98,7 +98,6 @@ screen.FOG_SETTINGS.comment=与迷雾种类有关的设置。
 
 screen.SUN_MOON_SETTINGS=太阳 / 月亮
 screen.SUN_MOON_SETTINGS.comment=与太阳、月亮相关的设置。
-
 
 screen.NETHER_SETTINGS=下界维度
 screen.NETHER_SETTINGS.comment=与下界维度有关的设置。
@@ -683,6 +682,9 @@ value.SHOW_LIGHT_LEVEL.3=总是开启
 
 option.COLOR_CODED_PROGRAMS=颜色处理程序 §c[-]§r
 option.COLOR_CODED_PROGRAMS.comment=显示正在被用于渲染的着色器。. §c[-]§r 该选项仅用于开发用途，不应被用于游戏中。. §e[*]§r 你可以在此处找到颜色值：shaders/lib/misc/colorCodedPrograms.glsl。
+
+option.GLOWING_COLORED_PARTICLES=强制粒子发光 §c[-]§r
+option.GLOWING_COLORED_PARTICLES.comment=使所有在技术上“已渲染”的粒子变为发光粒子。§c[-]§r 不推荐在一般游戏中使用此选项，因为许多由本不应发光的材料构成的粒子会因此发光。
 
 option.MINIMUM_LIGHT_MODE=洞穴光照
 option.MINIMUM_LIGHT_MODE.comment=为没有天空光照的区域添加额外光照。. §a[+]§r “默认” 选项受视频设置中的“亮度”滑动条影响。. §c[-]§r 大幅更改此设置可能破坏光照平衡。
