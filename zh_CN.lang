@@ -1,7 +1,7 @@
 #shaders/lang/zh_cn.lang
 # 简体中文由 MCBBS 隐居小树、Wudji 翻译，根据 CC-BY-SC-SA 4.0 进行许可。
-# 此汉化文件版本适用于 ComplementaryShaders r5.2.x。
-# 汉化文件版本：5.2.2a。
+# 此汉化文件版本适用于 ComplementaryShaders r5.3。
+# 汉化文件版本：5.3a。
 # 你可以从 klpbbs.com/thread-130958-1-1.html 下载 Complementary Shader 的最新翻译文件。
 
 #Profiles
@@ -36,11 +36,11 @@ option.info3.comment=“配置”一项主要修改“主性能设置”页面�
 
 option.info4=什么是“资源包支持”
 value.info4.0=
-option.info4.comment=“资源包支持”选项决定光影包如何处理游戏中不同的方块。. 举例来说：§b内置PBR+§r 处理金块为反射方块，而在 §elabPBR§r 或 §eSEUSPBR§r 模式下，你需要安装一个资源包来告诉光影包如何处理它。. 将“资源包支持”设置为 §a基础§r 将以相同方式处理除水以外的所有方块。
+option.info4.comment=“资源包支持”选项决定光影包如何处理游戏中不同的方块。. 举例来说：§b集成 PBR+§r 处理金块为反射方块，而在 §elabPBR§r 或 §eSEUSPBR§r 模式下，你需要安装一个资源包来告诉光影包如何处理它。. 将“资源包支持”设置为 §a基础§r 将以相同方式处理除水以外的所有方块。
 
 option.info5=如何修复模组兼容性问题？
 value.info5.0=
-option.info5.comment=由于光影包的工作方式，模组兼容性问题无法避免。但你可以查阅以下页面来获取一些已知问题的信息和解决方法：www.complementary.dev/mod-issues。. 译注：简体中文帮助详见 www.mcbbs.net/thread-1262472-1-1.html
+option.info5.comment=由于光影包的工作方式，模组兼容性问题无法避免。但你可以查阅以下页面来获取一些已知问题的信息和解决方法：www.complementary.dev/mod-issues。. 译注：简体中文帮助详见 www.klpbbs.com/thread-130958-1-1.html
 
 option.info6=
 value.info6.0=
@@ -201,7 +201,7 @@ value.BLOCK_REFLECT_QUALITY.1=§e低
 value.BLOCK_REFLECT_QUALITY.2=§c中
 value.BLOCK_REFLECT_QUALITY.3=§c高
 
-option.SHADOW_QUALITY=阴影采样质量
+option.SHADOW_QUALITY=实时阴影
 option.SHADOW_QUALITY.comment=调整阴影质量。. 每一等级都进一步减少了阴影噪点和伪影。低于 §e高§r 的选项将在树叶上启用优化的阴影，并且 §e很低§r 选项则从多个方面大幅降低阴影质量。§a关§r 则会完全禁用光轴和阴影。
 value.SHADOW_QUALITY.-1=§a关
 value.SHADOW_QUALITY.0=§e很低
@@ -212,7 +212,7 @@ value.SHADOW_QUALITY.4=§c超高
 value.SHADOW_QUALITY.5=§4§l极限
 
 option.LIGHTSHAFT_QUALI_DEFINE=光束质量 §e[*]§r
-option.LIGHTSHAFT_QUALI_DEFINE.comment=调整光束的质量，每一等级都进一步减少了光束的虚影。 . §e[*]§r “阴影采样质量”必须被设置为除“关”以外的其他选项来使光轴功能工作。
+option.LIGHTSHAFT_QUALI_DEFINE.comment=调整光束的质量，每一等级都进一步减少了光束的虚影。 . §e[*]§r “实时阴影”必须被设置为除“关”以外的其他选项来使光轴功能工作。
 value.LIGHTSHAFT_QUALI_DEFINE.0=§a关
 value.LIGHTSHAFT_QUALI_DEFINE.1=§e低
 value.LIGHTSHAFT_QUALI_DEFINE.2=§e中
@@ -273,7 +273,7 @@ value.ANISOTROPIC_FILTER.8=§b8x
 value.ANISOTROPIC_FILTER.16=§d16x
 
 option.COLORED_LIGHTING=高级光照颜色 §e[*]§r
-option.COLORED_LIGHTING.comment=使用像素化和flood-fill照明为方块光添加颜色，同时引入一些新的光源。. §e[]§r 此功能仅适用于Iris和支持的平台。. §e[*]§r 当设置“阴影采样质量”选项为“关”时，此选项将被禁用。§a[+]§r 该系统还启用了一些其他功能，您可以在“其他”->“高级光照颜色功能”菜单中单独启用/禁用这些功能。§c[-]§r 对于此效果，较高区块值对性能的影响远远超出预期，每增加2个区块，其性能消耗是前一等级的两倍以上。
+option.COLORED_LIGHTING.comment=使用像素化和flood-fill照明为方块光添加颜色，同时引入一些新的光源。. §e[]§r 此功能仅适用于Iris和支持的平台。. §e[*]§r 当设置“实时阴影”选项为“关”时，此选项将被禁用。§a[+]§r 该系统还启用了一些其他功能，您可以在“其他”->“高级光照颜色功能”菜单中单独启用/禁用这些功能。§c[-]§r 对于此效果，较高区块值对性能的影响远远超出预期，每增加2个区块，其性能消耗是前一等级的两倍以上。
 value.COLORED_LIGHTING.0=§a关
 value.COLORED_LIGHTING.128=§e4 区块
 value.COLORED_LIGHTING.192=§c6 区块
@@ -334,7 +334,7 @@ option.CLOUD_SHADOWS=云层阴影
 option.CLOUD_SHADOWS.comment=启用云层投射的阴影。. §e[*]§r 该选项只在“云朵风格”设置为“重构风格”或“无界风格”时生效。. §e[*]§r 如果“云朵风格”设置为“无界风格”，云朵的阴影将随机生成，因为“无界风格”下的云彩具有额外的复杂性。
 
 option.CLOUD_CLOSED_AREA_CHECK=防止云层出现在密闭空间 §e[*]§r
-option.CLOUD_CLOSED_AREA_CHECK.comment=进行一项额外检查来移除封闭空间内的云朵。. §e[*]§r 该选项只在“云朵风格”设置为“重构风格”或“无界风格”时生效。. §e[*]§r “阴影采样质量”设置为“关”时，该选项也将被视为关闭。
+option.CLOUD_CLOSED_AREA_CHECK.comment=进行一项额外检查来移除封闭空间内的云朵。. §e[*]§r 该选项只在“云朵风格”设置为“重构风格”或“无界风格”时生效。. §e[*]§r “实时阴影”设置为“关”时，该选项也将被禁用。
 
 option.CLOUD_ALT1=云层高度
 option.CLOUD_ALT1.comment=决定云层出现的高度。. §e[*]§r 该选项只在“云朵风格”设置为“重构风格”或“无界风格”时生效。
@@ -553,7 +553,7 @@ option.WEATHER_TEX_OPACITY=天气材质透明度
 option.WEATHER_TEX_OPACITY.comment=调整雨/雪天气材质的透明度。
 
 option.SHADOW_SMOOTHING=平滑阴影
-option.SHADOW_SMOOTHING.comment=调整阴影的锐度。. §c[-]§r 降低该设置会增加阴影闪烁并影响性能。. §e[*]§r 此设置仅在“阴影采样质量”设置为“低“或更高时有效。
+option.SHADOW_SMOOTHING.comment=调整阴影的锐度。. §c[-]§r 降低该设置会增加阴影闪烁并影响性能。. §e[*]§r 此设置仅在“实时阴影”设置为“低“或更高时有效。
 value.SHADOW_SMOOTHING.4=更平滑
 value.SHADOW_SMOOTHING.3=平滑
 value.SHADOW_SMOOTHING.2=锐利 §c[-]
@@ -612,8 +612,11 @@ value.IMAGE_SHARPENING.8=8x §c[-]
 value.IMAGE_SHARPENING.9=9x §c[-]
 value.IMAGE_SHARPENING.10=10x §c[-]
 
-option.LENSFLARE=镜头光斑
-option.LENSFLARE.comment=启用镜头看向太阳或月亮时的光斑效果。. §c[-]§r 该效果可能严重影响性能表现。
+option.LENSFLARE_MODE=镜头光斑
+option.LENSFLARE_MODE.comment=启用镜头看向太阳或月亮时的光斑效果。. §c[-]§r 该效果可能严重影响性能表现。
+value.LENSFLARE_MODE.0=关
+value.LENSFLARE_MODE.1=仅太阳
+value.LENSFLARE_MODE.2=太阳和月亮
 
 option.LENSFLARE_I=镜头光晕强度
 option.LENSFLARE_I.comment=调整镜头光晕的强度。
@@ -623,6 +626,9 @@ option.TAA_MODE.comment=确定时域抗锯齿（TAA）的行为。. 智能 & 精
 value.TAA_MODE.1=智能 & 精细
 value.TAA_MODE.2=强烈 §c[-]
 value.TAA_MODE.0=关 §c[-]
+
+option.DISTANT_LIGHT_BOKEH=远处光源散焦
+option.DISTANT_LIGHT_BOKEH.comment=通过在远处应用单像素模糊，使远处光源看起来分散。. §a[+]§r 此效果可通过集成 PBR+（可选）进行优化，调整远处光源以获得更好的效果。
 
 option.MOTION_BLURRING=动态模糊
 option.MOTION_BLURRING.comment=在视角摇晃时添加模糊效果。
@@ -669,8 +675,17 @@ value.CHROMA_ABERRATION.6=6 §c[-]
 value.CHROMA_ABERRATION.7=7 §c[-]
 value.CHROMA_ABERRATION.8=8 §c[-]
 
+option.IPBR_EMISSIVE_MODE=集成 PBR+ 自发光模式
+option.IPBR_EMISSIVE_MODE.comment=确定在集成 PBR+ 中如何处理自发光。选择 labPBR 或 seuspbr 选项可让兼容的资源包完全覆盖带有镜面纹理的方块上的集成 PBR+ 自发光。. §c[-]§r 除非你知道自己在做什么，否则不建议更改此设置。
+value.IPBR_EMISSIVE_MODE.1=仅集成 PBR+ 
+value.IPBR_EMISSIVE_MODE.3=labPBR > 集成 PBR+ 
+value.IPBR_EMISSIVE_MODE.2=seuspbr > 集成 PBR+ 
+
+option.IPBR_PARTICLE_FEATURES=集成 PBR+ 粒子特性
+option.IPBR_PARTICLE_FEATURES.comment=启用多个粒子特性，包括发光熔岩粒子和更好颜色的水粒子。
+
 option.FANCY_GLASS=改善玻璃效果
-option.FANCY_GLASS.comment=通过添加透明层来改善玻璃效果。. §c[-]§r 由于 Sodium 的 Bug, 该选项会在 Iris Shader 上出现问题。 §e[*]§r “资源包支持”选项必须设置为“集成 PBR+”。.
+option.FANCY_GLASS.comment=通过为普通玻璃添加一个半透明层来改善其效果。. §c[-]§r 不适用于旧版本的Iris。. §e[*]§r “资源包支持”选项必须设置为“集成 PBR+”。
 
 option.GREEN_SCREEN_LIME=黄绿色方块绿幕转换
 option.GREEN_SCREEN_LIME.comment=将"黄绿色混凝土"，"黄绿色羊毛"，和"黄绿色地毯"转换为视频编辑中使用的绿幕。. 提示1：关闭"发光"选项来改善抠图分离效果。. 提示2：把光源方块放在黄绿色地毯下方用于照明。. 提示3：你可以关闭抗锯齿(FXAA)并在"性能设置"中将"细节设置"选项调整为"极低"来禁用所有过滤效果以得到完美的逐像素分离效果。.
@@ -718,7 +733,7 @@ option.AMBIENT_MULT=阴影光照倍率
 option.AMBIENT_MULT.comment=决定阴影中环境光的强度。. §c[-]§r 大幅修改该选项可能导致光照平衡被破坏。
 
 option.PLAYER_SHADOW=玩家阴影 §e[*]§r
-option.PLAYER_SHADOW.comment=决定玩家是否会投射阴影。. §e[*]§r 该选项仅在Iris上工作. §e[*]§r 当“阴影采样质量”被设置为关时，该选项将不会工作。
+option.PLAYER_SHADOW.comment=决定玩家是否会投射阴影。. §e[*]§r 该选项仅在Iris上工作. §e[*]§r 当“实时阴影”设置为关时，该选项将不会工作。
 value.PLAYER_SHADOW.-1=关
 value.PLAYER_SHADOW.1=开
 
@@ -872,6 +887,9 @@ option.WAVING_WATER_VERTEX.comment=为水面添加波动来模拟风的效果。
 option.WAVING_RAIN=雨雪飘动纹理
 option.WAVING_RAIN.comment=为飘落的雨雪纹理添加运动效果，使其看起来更灵动。
 
+option.SPECIAL_PORTAL_EFFECTS=特殊传送门效果
+option.SPECIAL_PORTAL_EFFECTS.comment=为下界传送门、末地传送门和末地折跃门添加特殊动画和发光效果。
+
 option.WORLD_OUTLINE=轮廓线世界
 option.WORLD_OUTLINE.comment=在方块边缘添加轮廓线。
 
@@ -940,6 +958,12 @@ option.PORTAL_EDGE_EFFECT.comment=为末地和下界传送门添加发光效果�
 
 option.PUDDLE_VOXELIZATION=修复玻璃下的雨水坑
 option.PUDDLE_VOXELIZATION.comment=当“雨水坑”选项开启时，阻止雨水坑生成在顶部有玻璃的密闭区域内。. §e[*]§r 此功能仅在性能设置中启用“高级光照颜色”，且您的系统支持此功能时才有效。
+
+option.COLORED_CANDLE_LIGHT=彩色蜡烛光效
+option.COLORED_CANDLE_LIGHT.comment=使蜡烛发出的光与其底座颜色相同。. §e[*]§r 去饱和的蜡烛颜色变体将继续使用通常的火焰颜色。
+
+option.COLORED_LIGHT_SATURATION=彩色光效饱和度
+option.COLORED_LIGHT_SATURATION.comment=调整高级彩色光效产生的颜色饱和度。. §e[*]§r 不建议更改此值，因为视觉效果在默认饱和度下看起来最平衡。
 
 option.COLORED_LIGHT_FOG=颜色光雾
 option.COLORED_LIGHT_FOG.comment=为场景添加方块光体积雾，绝大多数情况下此效果在地下或晚上更明显。. §e[*]§r 此功能仅在性能设置中启用“高级光照颜色”，且您的系统支持此功能时才有效。. §c[-]§r 该选项可能严重影响性能表现。
