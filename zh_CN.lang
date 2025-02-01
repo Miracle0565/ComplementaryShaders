@@ -1,8 +1,8 @@
 #shaders/lang/zh_cn.lang
 # 简体中文由 MCBBS 隐居小树、Wudji 翻译，根据 CC-BY-SC-SA 4.0 进行许可。
-# 此汉化文件版本适用于 ComplementaryShaders r5.3。
-# 汉化文件版本：5.3a。
-# 你可以从 klpbbs.com/thread-130958-1-1.html 下载 Complementary Shader 的最新翻译文件。
+# 此汉化文件版本适用于 ComplementaryShaders r5.4。
+# 汉化文件版本：5.4a。
+# 你可以从 klpbbs.com/thread-130958-1-1.html 或 www.mczwlt.net/resource/eek102d5 下载 Complementary Shader 的最新翻译文件。
 
 #Profiles
 profile.POTATO=§a极低
@@ -12,6 +12,7 @@ profile.MEDIUM=§a中
 profile.HIGH=§e高（默认）
 profile.VERYHIGH=§c超高
 profile.ULTRA=§4§l极限
+profile.COMPLEMENTARY=§4§l§n§oComplementary
 profile.comment=光影包预设配置能按照最优化的性能和视觉效果比来调整性能设置。. §e[*]§r 推荐使用预设配置之一作为你的设置，除非你知道你在做什么。. §e[*]§r 所有受影响的配置都可在“主性能设置”页面找到。
 
 #Information
@@ -158,10 +159,14 @@ screen.MOON_PHASE_INF_SETTINGS.comment=决定不同月相如何影响夜晚光�
 screen.ACL_FEATURES_SETTINGS=高级光照颜色独占功能 §e[*]§r
 screen.ACL_FEATURES_SETTINGS.comment=关于高级光照颜色独占功能的设置。§e[*]§r 这些功能仅在性能设置中启用“高级光照颜色”，且您的系统支持此功能时才有效。
 
+screen.PIXELATED_LIGHTING_SETTINGS=像素化光照
+screen.PIXELATED_LIGHTING_SETTINGS.comment=使特定光照效果像素化的设置。
+
 screen.WATER_SETTINGS=水体设置
 screen.WATER_SETTINGS.comment=与水体有关的设置。
 
 screen.WATER_COLOR_SETTINGS=水面颜色
+
 screen.UNDERWATER_COLOR_SETTINGS=水下颜色
 
 screen.WATER_WAVE_SETTINGS=水面波浪强度 §e[*]§r
@@ -220,7 +225,7 @@ value.LIGHTSHAFT_QUALI_DEFINE.3=§c高
 value.LIGHTSHAFT_QUALI_DEFINE.4=§4§l超高
 
 option.shadowDistance=阴影距离
-option.shadowDistance.comment=调整实时渲染的阴影与玩家的距离。. §e[*]§r 该值上限为渲染距离。. §c[-]§r 过低的值可能导致光轴过度泄露。
+option.shadowDistance.comment=调整实时渲染的阴影与玩家的距离。. §e[*]§r 推荐将此值设置为渲染距离的80%以获得最好的性能表现和阴影覆盖效果。. §e[*]§r 该值上限为渲染距离。. §c[-]§r 过低的值可能导致光轴过度泄露。
 value.shadowDistance.64.0=§a4 区块 §c[-]
 value.shadowDistance.80.0=§a5 区块 §c[-]
 value.shadowDistance.96.0=§a6 区块 §c[-]
@@ -233,7 +238,7 @@ value.shadowDistance.256.0=§c16 区块
 value.shadowDistance.320.0=§c20 区块
 value.shadowDistance.384.0=§4§l24 区块
 value.shadowDistance.512.0=§4§l32 区块
-value.shadowDistance.768.0=§4§k-§r§4§l§n§o48 区块§r§4§k-
+value.shadowDistance.768.0=§4§l§n§o48 区块
 value.shadowDistance.1024.0=§4§k-§r§4§l§n§o64 区块§r§4§k-
 
 option.ENTITY_SHADOWS_DEFINE=实体阴影
@@ -273,13 +278,15 @@ value.ANISOTROPIC_FILTER.8=§b8x
 value.ANISOTROPIC_FILTER.16=§d16x
 
 option.COLORED_LIGHTING=高级光照颜色 §e[*]§r
-option.COLORED_LIGHTING.comment=使用像素化和flood-fill照明为方块光添加颜色，同时引入一些新的光源。. §e[]§r 此功能仅适用于Iris和支持的平台。. §e[*]§r 当设置“实时阴影”选项为“关”时，此选项将被禁用。§a[+]§r 该系统还启用了一些其他功能，您可以在“其他”->“高级光照颜色功能”菜单中单独启用/禁用这些功能。§c[-]§r 对于此效果，较高区块值对性能的影响远远超出预期，每增加2个区块，其性能消耗是前一等级的两倍以上。
+option.COLORED_LIGHTING.comment=使用像素化和flood-fill照明为方块光添加颜色，同时引入一些新的光源。. §e[]§r 此功能仅适用于Iris和支持的平台。. §e[*]§r 当设置“实时阴影”选项为“关”时，此选项将被禁用。§a[+]§r 该系统还启用了一些其他功能，您可以在“其他”->“高级光照颜色功能”菜单中单独启用/禁用这些功能。§c[-]§r 对于此效果，较高区块值对性能的影响远远超出预期，每增加1个值，其性能消耗是前一等级的两倍以上。
 value.COLORED_LIGHTING.0=§a关
-value.COLORED_LIGHTING.128=§e4 区块
+value.COLORED_LIGHTING.128=§c4 区块
 value.COLORED_LIGHTING.192=§c6 区块
-value.COLORED_LIGHTING.256=§c8 区块
+value.COLORED_LIGHTING.256=§4§l8 区块
 value.COLORED_LIGHTING.384=§4§l12 区块
-value.COLORED_LIGHTING.512=§4§k-§r§4§l§n§o16 区块§r§4§k- §r§c[-]
+value.COLORED_LIGHTING.512=§4§l§n§o16 区块
+value.COLORED_LIGHTING.768=§4§l§n§o24 区块 §r§c[-]
+value.COLORED_LIGHTING.1024=§4§k-§r§4§l§n§o32 区块§r§4§k- §r§c[-]
 
 option.SSAO_I=边缘阴影强度（SSAO）
 option.SSAO_I.comment=调整屏幕空间环境光遮蔽（SSAO）为场景边缘添加额外环境光的强度。. §e[*]§r 当 SSAO 在“性能设置”中被禁用时，该选项不会工作。
@@ -317,6 +324,9 @@ value.LIGHTSHAFT_BEHAVIOUR.3=极限 §c[-]
 
 option.LIGHTSHAFT_SMOKE=光轴烟雾
 option.LIGHTSHAFT_SMOKE.comment=为光轴添加体积烟雾。. §c[-]§r 该选项可能影响性能。
+
+option.SPECIAL_PALE_GARDEN_LIGHTSHAFTS=苍白之园特别光轴
+option.SPECIAL_PALE_GARDEN_LIGHTSHAFTS.comment=使苍白之园群系中的光轴看起来更加强烈。
 
 option.LIGHTSHAFT_DAY_I=光轴白天倍率
 option.LIGHTSHAFT_NIGHT_I=光轴夜晚倍率
@@ -559,14 +569,24 @@ value.SHADOW_SMOOTHING.3=平滑
 value.SHADOW_SMOOTHING.2=锐利 §c[-]
 value.SHADOW_SMOOTHING.1=更锐利 §c[-]
 
-option.PIXEL_SHADOW=像素化阴影
-option.PIXEL_SHADOW.comment=将世界坐标修改为网格来使阴影像素化。. §e[*]§r 该选项不会影响性能。
-value.PIXEL_SHADOW.0=关
-value.PIXEL_SHADOW.8=8x8 §e[*]
-value.PIXEL_SHADOW.16=16x16 §e[*]
-value.PIXEL_SHADOW.32=32x32 §e[*]
-value.PIXEL_SHADOW.64=64x64 §e[*]
-value.PIXEL_SHADOW.128=128x128 §e[*]
+option.PIXELATED_SHADOWS=像素化阴影
+option.PIXELATED_SHADOWS.comment=使太阳和月亮投射的阴影看起来像素化。
+
+option.PIXELATED_BLOCKLIGHT=像素化方块光
+option.PIXELATED_BLOCKLIGHT.comment=使光源方块投射的光像素化。
+
+option.PIXELATED_AO=像素化边缘阴影
+option.PIXELATED_AO.comment=使原版的环境光遮蔽像素化。
+
+option.PIXEL_SCALE=像素化缩放
+option.PIXEL_SCALE.comment=基于材质分辨率的缩放幅度。
+value.PIXEL_SCALE.-2=0.25x
+value.PIXEL_SCALE.-1=0.5x
+value.PIXEL_SCALE.1=1x
+value.PIXEL_SCALE.2=2x
+value.PIXEL_SCALE.3=4x
+value.PIXEL_SCALE.4=8x
+value.PIXEL_SCALE.5=16x
 
 option.BLOOM=发光
 option.BLOOM.comment=启用明亮物品和潮湿环境的发光效果。
@@ -898,6 +918,9 @@ option.WORLD_OUTLINE_THICKNESS.comment=设置世界轮廓线强度效果的强�
 
 option.WORLD_OUTLINE_I=世界轮廓线亮度
 option.WORLD_OUTLINE_I.comment=设置世界轮廓线的亮度。
+
+option.WORLD_OUTLINE_ON_ENTITIES=实体上的世界轮廓线
+option.WORLD_OUTLINE_ON_ENTITIES.comment=设置世界轮廓线是否会影响实体。. §c[-]§r 该设置可能不会完全兼容部分自定义PBR资源包。
 
 option.DARK_OUTLINE=黑色轮廓线
 option.DARK_OUTLINE.comment=为方块周围添加黑色轮廓线。. §c[-]§r 该选项可能影响性能表现。
